@@ -18,12 +18,13 @@ class SplitText:
 			text = myfile.read()
 			
 		#sentence segmentation
-		sentences = nltk.sent_tokenize
+		sentences = nltk.sent_tokenize(text)
 		
 		#tokenization
+		sentences = [nltk.word_tokenize(sent) for sent in sentences]
 		
 		#pos tagging
-		
+		sentences = [nltk.pos_tag(sent) for sent in sentences]
 		
 		
 		#write document
