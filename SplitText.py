@@ -1,4 +1,4 @@
-import nltk, re, pprint
+import nltk, re, pprint, EntityDet
 
 class SplitText:
 	" " " Splits ready Dataset " " " 
@@ -25,8 +25,7 @@ class SplitText:
 		
 		#pos tagging
 		sentences = [nltk.pos_tag(sent) for sent in sentences]
+
+		e = EntityDet.EntityDet(sentences)
+		e.detectEnt()
 		
-		
-		#write document
-		with open(base + ".pos", "w") as mefile:
-			mefile.writelines(text1)

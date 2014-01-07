@@ -9,7 +9,7 @@ class ReadDataSet:
 		#find basename
 		import os
 		base = os.path.basename(self.file1)
-		print self.file1
+	
 		
 	
 		#read file

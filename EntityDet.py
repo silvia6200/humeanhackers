@@ -3,23 +3,13 @@ import nltk, re, pprint
 class EntityDet:
 	" " " Splits ready Dataset " " " 
 
-	def __init__(self, file1):
-		self.file1 = file1
-		
+	def __init__(self, sentences):
+		self.sentences = sentences
+	
 	def detectEnt(self):
 		
-		#find basename
-		import os
-		base = os.path.basename(self.file1)
-		
-	
-		#read file
-		with open (self.file1,"r") as myfile:
-			text = myfile.read()
-			
 		#entity detection - chunking
-		print nltk.ne_chunk(text, binary=True) # named entity extraction
-		
+
 		grammar = r"""
 			NP: {<DT|JJ|NN.*>+}          # Chunk sequences of DT, JJ, NN
 			PP: {<IN><NP>}               # Chunk prepositions followed by NP
@@ -33,7 +23,7 @@ class EntityDet:
 		c = {}
 		C = 0
 		
-		for sentence in text:
+		for sentence in self.sentences:
 			c[C] = cp.parse(sentence)
 			C = C+1
 			
@@ -41,6 +31,5 @@ class EntityDet:
 		
 		
 		
-		#write document
-		with open(base + ".pos", "w") as mefile:
-			mefile.writelines(text1)
+
+		print "Reached EOF"
