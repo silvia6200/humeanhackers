@@ -6,7 +6,7 @@ class SplitText:
 	def __init__(self, file1):
 		self.file1 = file1
 		
-	def split(self)
+	def split(self):
 		
 		#find basename
 		import os

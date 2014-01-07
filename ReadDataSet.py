@@ -4,11 +4,12 @@ class ReadDataSet:
 	def __init__(self, file1):
 		self.file1 = file1
 		
-	def readD(self)
+	def readD(self):
 		
 		#find basename
 		import os
 		base = os.path.basename(self.file1)
+		print self.file1
 		
 	
 		#read file
@@ -16,7 +17,7 @@ class ReadDataSet:
 			text = myfile.read()
 			
 		#extract relevant text from dataset
-		text1 = text  # needs to be changed based on the data source
+		text1 = text  # clean-up operations
 		
 		#write document
 		with open(base + ".ready", "w") as mefile:

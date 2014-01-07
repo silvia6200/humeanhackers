@@ -6,7 +6,7 @@ class EntityDet:
 	def __init__(self, file1):
 		self.file1 = file1
 		
-	def detectEnt(self)
+	def detectEnt(self):
 		
 		#find basename
 		import os
