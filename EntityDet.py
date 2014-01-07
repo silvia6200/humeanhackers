@@ -18,6 +18,7 @@ class EntityDet:
 			text = myfile.read()
 			
 		#entity detection - chunking
+		print nltk.ne_chunk(text, binary=True) # named entity extraction
 		
 		grammar = r"""
 			NP: {<DT|JJ|NN.*>+}          # Chunk sequences of DT, JJ, NN
