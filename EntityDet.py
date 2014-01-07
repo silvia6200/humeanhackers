@@ -18,6 +18,10 @@ class EntityDet:
 			text = myfile.read()
 			
 		#entity detection
+		print nltk.ne_chunk(text, binary=True) # named entity extraction
+		
+
+
 		
 		#relation detection
 		
