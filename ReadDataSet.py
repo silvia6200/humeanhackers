@@ -16,7 +16,7 @@ class ReadDataSet:
 			text = myfile.read()
 			
 		#extract relevant text from dataset
-		text1 = 
+		text1 = text  # needs to be changed based on the data source
 		
 		#write document
 		with open(base + ".ready", "w") as mefile:
