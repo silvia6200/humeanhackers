@@ -1,7 +1,7 @@
 humianhackers
 =============
+Running main.py will run the following in order:
 
-The order in which the python files should be run is the following:
 ReadDataSet.py
 SplitText.py
 EntityDet.py
