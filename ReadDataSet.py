@@ -20,24 +20,30 @@ class ReadDataSet:
 				
 		#write document
 		f = open(base + ".ready", "w")         
-       
-        #counts loops
-		a = 0
 		
-		
-		#for every line
-        for line in text:
-                         
-            if line.startswith("<bestanswer>"):
 			
-			#split line into sentences
-                sentences = nltk.sent_tokenize(line)
+		#counts loops
+		a = 0
+			
+		#for every line
+		for line in text:
+							 
+			if line.startswith("<bestanswer>"):
 				
+			#split line into sentences
+				sentences = nltk.sent_tokenize(line[12:-13])
+				
+				s = len(sentences)
 				#write into document
-                for x in sentences:
-                        f.write(x + "\n")
-                        
-            a +=1
-            print( (str(a)), end='\r')
- 
-        f.close
+				x=0
+				while x < (s-1):
+					f.write(sentences[x] + "\n")
+					a +=1
+					x+=1
+				f.write(sentences[s-1])
+					
+				a +=1
+				print( (str(a)), end='\r') 
+				
+		f.close
+        
