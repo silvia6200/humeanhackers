@@ -15,17 +15,19 @@ class SplitText:
 	
 		#read file
 		with open (self.file1,"r") as myfile:
-			text = myfile.read()
+			text = myfile.readlines()
 			
-		#sentence segmentation
-		sentences = nltk.sent_tokenize(text)
+		#sentence segmentation - done in read method
+		#sentences = nltk.sent_tokenize(text)
 		
 		#tokenization
-		sentences = [nltk.word_tokenize(sent) for sent in sentences]
+		sentences = [nltk.word_tokenize(sent) for sent in text]
 		
 		#pos tagging
 		sentences = [nltk.pos_tag(sent) for sent in sentences]
-
+		
+		print(sentences[0])
+		
 		e = EntityDet.EntityDet(sentences)
 		e.detectEnt()
 		
