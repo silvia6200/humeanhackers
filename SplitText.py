@@ -24,6 +24,5 @@ def split(self):
 		
 	print(sentences[0])
 		
-	e = EntityDet.EntityDet(sentences)
-	e.detectEnt()
+	e = EntityDet.detectEnt(sentences)
 		

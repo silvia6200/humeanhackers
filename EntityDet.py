@@ -6,12 +6,12 @@ def detectEnt(self):
 	#entity detection - chunking
 
 	grammar = r"""
-	NP: {<DT|JJ|NN.*>+}          # Chunk sequences of DT, JJ, NN
-	PP: {<IN><NP>}               # Chunk prepositions followed by NP
-	VB: {<VB.>+}				# Chunk sequence of verbs
-	VP: {<VB><NP|PP|CLAUSE>+$} # Chunk verbs and their arguments
-	CLAUSE: {<NP><VP>}           # Chunk NP, VP
-	"""
+		NP: {<DT|JJ|NN.*>+}          # Chunk sequences of DT, JJ, NN
+		PP: {<IN><NP>}               # Chunk prepositions followed by NP
+		VB: {<VB.>+}				# Chunk sequence of verbs
+		VP: {<VB><NP|PP|CLAUSE>+$} # Chunk verbs and their arguments
+		CLAUSE: {<NP><VP>}           # Chunk NP, VP
+		"""
 	cp = nltk.RegexpParser(grammar, loop=2)
 		
 	# create a dictionary of chunks
