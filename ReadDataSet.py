@@ -2,7 +2,7 @@ from __future__ import print_function
 
 #Reads the given Dataset 
 		
-def readD(self):
+def readD(txtdoc):
 		
 	#find basename
 	import os, nltk
