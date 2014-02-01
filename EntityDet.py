@@ -1,4 +1,4 @@
-import nltk, re, pprint
+import nltk, re, pprint, Rel
 # Splits ready Dataset 
 
 def detectEnt(sentences):
@@ -17,19 +17,22 @@ def detectEnt(sentences):
 	C = 0
 
 	for sent in sentences
-	#entity detection - chunking
-		sentnamed = nltk.ne_chunk(sent)
-		
-	#parsing into a tree
-		sentchunk = cp.parse(sentnamed)
-				
-			
+	
+	IN = re.compile(r'.*\bin\b(?!\b.+ing)')
+	OF = re.compile(r'.*\bof\b(?!\b.+ing)')	
+	
+	patterns = [IN,OF]
+	
 	for sentence in self.sentences:
-		c[C] = cp.parse(sentence)
+	#entity detection and parsing
+		sentne = nltk.ne_chunk(sentence, binary = True)	
+		sentp = cp.parse(sentne)
+		print("sentence parsed")
+			for pattern in patterns:
+				for rel in Rel.extract_rels('NE','NE',sentp, pattern, window = 10) 
+			
+		c[C] = 
 		C = C+1
 			
-	#relation detection
-		
-		
 		
 	print "Reached EOF"
