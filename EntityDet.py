@@ -11,16 +11,19 @@ def detectEnt(sentences):
 		CLAUSE: {<NP><VP>}           # Chunk NP, VP
 		"""
 	cp = nltk.RegexpParser(grammar, loop=2)
+	
+	# create a dictionary of chunks
+	c = {}
+	C = 0
 
 	for sent in sentences
 	#entity detection - chunking
 		sentnamed = nltk.ne_chunk(sent)
+		
+	#parsing into a tree
 		sentchunk = cp.parse(sentnamed)
 				
-	# create a dictionary of chunks
-	c = {}
-	C = 0
-		
+			
 	for sentence in self.sentences:
 		c[C] = cp.parse(sentence)
 		C = C+1
