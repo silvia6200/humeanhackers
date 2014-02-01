@@ -1,9 +1,6 @@
-import ReadDataSet, SplitText, EntityDet 
+import ReadDataSet, SplitText
 
-textsource = "manner100.txt"
 
-r = ReadDataSet.ReadDataSet(textsource)
-r.readD()
-
-s = SplitText.SplitText(textsource + ".ready")
-s.split()
+def extract(txtdoc):
+	ReadDataSet.readD(txtdoc)
+	SplitText.split(txtdoc + ".ready")

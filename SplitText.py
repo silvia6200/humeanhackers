@@ -1,16 +1,16 @@
-import nltk, re, pprint, EntityDet
+import nltk, re, pprint
 
 # Splits ready Dataset
 
-def split(self):
+def split(txtreadydoc):
 	
 	#find basename
 	import os
-	base = os.path.basename(self)
+	base = os.path.basename(txtreadydoc)
 		
 	
 	#read file
-	with open (self,"r") as myfile:
+	with open (txtreadydoc,"r") as myfile:
 		text = myfile.readlines()
 		
 	#sentence segmentation - done in read method
@@ -24,5 +24,4 @@ def split(self):
 		
 	print(sentences[0])
 		
-	e = EntityDet.detectEnt(sentences)
-		
+	

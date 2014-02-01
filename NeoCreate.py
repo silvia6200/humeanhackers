@@ -1,7 +1,7 @@
 from neo4j import GraphDatabase
  
 # Create a database
-db = GraphDatabase(folder_to_put_db_in)
+db = GraphDatabase(reldatabase)
  
 # All write operations happen in a transaction
 with db.transaction:

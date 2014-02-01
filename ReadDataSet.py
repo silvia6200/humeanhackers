@@ -2,13 +2,13 @@ from __future__ import print_function
 
 #Reads the given Dataset 
 		
-def readD(self):
+def readD(txtdoc):
 		
 	#find basename
 	import os, nltk
-	base = os.path.basename(self)		
+	base = os.path.basename(txtdoc)		
 			#read file
-	with open (self,"r") as myfile:
+	with open (txtdoc,"r") as myfile:
 		text = myfile.readlines()
 		
 	#extract relevant text from dataset
