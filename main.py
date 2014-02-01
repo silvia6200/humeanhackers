@@ -1,4 +1,6 @@
-import ReadDataSet, SplitText, EntityDet 
+import ReadDataSet, SplitText
 
 
 def extract(txtdoc):
+	ReadDataSet.readD(txtdoc)
+	SplitText.split(txtdoc + ".ready")
