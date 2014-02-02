@@ -12,27 +12,29 @@ def detectEnt(sentences):
 		"""
 	cp = nltk.RegexpParser(grammar, loop=2)
 	
-	# create a dictionary of chunks
-	c = {}
-	C = 0
+	
 
-	for sent in sentences
-	
 	IN = re.compile(r'.*\bin\b(?!\b.+ing)')
-	OF = re.compile(r'.*\bof\b(?!\b.+ing)')	
+	OF = re.compile(r'.*\bof\b(?!\b.+ing)')
+	IS = re.compile(r'.*\bis\b(?!\b.+ing)')
+	TO = re.compile(r'.*\bto\b(?!\b.+ing)')
+	AND = re.compile(r'.*\band\b(?!\b.+ing)')
 	
-	patterns = [IN,OF]
+	patterns = [IN,OF,IS,TO,AND]
 	
-	for sentence in self.sentences:
+	for sentence in sentences:
 	#entity detection and parsing
 		sentne = nltk.ne_chunk(sentence, binary = True)	
 		sentp = cp.parse(sentne)
+		print(sentne)
 		print("sentence parsed")
-			for pattern in patterns:
-				for rel in Rel.extract_rels('NE','NE',sentp, pattern, window = 10) 
-			
-		c[C] = 
-		C = C+1
+		for pattern in patterns:
+			#print("me here")
+
+			for rel in Rel.extract_rels('NE','NE',sentne, pattern, 10): 
+				print("and here")
+				#Neocreate.addtodb(rel)
+				print nltk.sem.relextract.show_raw_rtuple(rel)
 			
 		
 	print "Reached EOF"

@@ -24,9 +24,10 @@ def readD(txtdoc):
 	for line in text:
 							 
 		if line.startswith("<bestanswer>"):
-				
+			
+			cleansentence = line[12:-13].replace("&#xa;"," ").replace(";",".").replace("&lt;br /&gt;&#xa;","").replace("&#xa;"," ").replace("...",".").replace("<"," ").replace("&lt.br /&gt.","")
 		#split line into sentences
-			sentences = nltk.sent_tokenize(line[12:-13])
+			sentences = nltk.sent_tokenize(cleansentence)
 				
 			s = len(sentences)
 			#write into document
