@@ -3,17 +3,24 @@ import nltk, re, pprint, EntityDet, os
 
 # Splits ready Dataset
 
-def split(txtreadydoc):
+def split(txtreadydoc, lined):
 	
 	#find basename
 	base = os.path.basename(txtreadydoc)
-		
 	
-	#read file
-	with open (txtreadydoc,"r") as myfile:
-		bla = myfile.read()
-	
-	text = nltk.sent_tokenize(bla)
+
+	# if File has been cleaned to be one sentence per line:
+
+	if lined:
+		with open (txtreadydoc,"r") as myfile:
+				text = myfile.readlines()
+	else:
+	#read file and tokenize sentence
+		with open (txtreadydoc,"r") as myfile:
+			bla = myfile.read()
+		text = nltk.sent_tokenize(bla)
+		print("documents read")
+
 	l = len(text)
 	print("length of dataset: "+ (str(l)))
 	#sentence segmentation - done in read method
@@ -22,7 +29,7 @@ def split(txtreadydoc):
 	dict = {}
 	#tokenization
 	for sent in text:
-		dict[c1] = nltk.word_tokenize(sent[:-1] + 'in Germany.')
+		dict[c1] = nltk.word_tokenize(sent[:-1] + ' in Germany.')
 		c1 += 1
 		print( (str(c1)), end='\r') 
 		
@@ -39,6 +46,7 @@ def split(txtreadydoc):
 	#sentences = [nltk.pos_tag(sent) for sent in sentences]
 	print("sentences tagged")
 	
-	EntityDet.detectEnt(sentences)
+	#EntityDet.detectEnt(sentences)
+	return sentences
 		
 	

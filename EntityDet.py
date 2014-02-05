@@ -22,6 +22,9 @@ def detectEnt(sentences):
 	
 	patterns = [IN,OF,IS,TO,AND]
 	
+	#write document
+	f = open("testentities", "w") 
+
 	for sentence in sentences:
 	#entity detection and parsing
 		sentne = nltk.ne_chunk(sentence, binary = True)	
@@ -34,7 +37,9 @@ def detectEnt(sentences):
 			for rel in Rel.extract_rels('NE','NE',sentne, pattern, 10): 
 				print("and here")
 				#Neocreate.addtodb(rel)
-				print nltk.sem.relextract.show_raw_rtuple(rel)
+				f.write(nltk.sem.relextract.show_raw_rtuple(rel) + '\n')
 			
-		
-	print "Reached EOF"
+	f.close
+	
+
+	
