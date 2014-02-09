@@ -1,4 +1,4 @@
-import nltk, re, pprint, Rel
+import nltk, re, pprint, Rel, NeoCreate
 # Splits ready Dataset 
 
 def detectEnt(sentences):
@@ -38,7 +38,7 @@ def detectEnt(sentences):
 
 			for rel in Rel.extract_rels('NE','NE',sentne, pattern, 10): 
 				print("and here")
-				#Neocreate.addtodb(rel)
+				NeoCreate.addtodb(rel)
 				f.write(pnames[ps] + "Relation:  " + nltk.sem.relextract.show_raw_rtuple(rel) + '\n')
 			ps+= 1
 			
