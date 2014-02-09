@@ -1,7 +1,7 @@
 from neo4j import GraphDatabase
  
 # Create a database
-db = GraphDatabase(reldatabase)
+db = GraphDatabase('reldatabase')
  
 def addtodb(rel):
 #	rel['subjsym'], rel['objectsym'], rel['filler'] 
@@ -21,3 +21,4 @@ def addtodb(rel):
 	print "Created nodes " + leftnode + " and " + rightnode + " with relationship " + relationship +"! \n"
 
 	db.shutdown()
+

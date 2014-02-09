@@ -1,0 +1,3 @@
+INRelation:  [NE: 'U.S./NNP'] 'are/VBP in/IN' [NE: 'North/NNP America/NNP']
+INRelation:  [NE: 'Edinburgh/NNP University/NNP'] 'is/VBZ in/IN' [NE: 'Scotland/NNP']
+ISRelation:  [NE: 'Edinburgh/NNP University/NNP'] 'is/VBZ in/IN' [NE: 'Scotland/NNP']

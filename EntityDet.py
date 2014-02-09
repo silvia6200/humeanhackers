@@ -19,7 +19,7 @@ def detectEnt(sentences):
 	IS = re.compile(r'.*\bis\b(?!\b.+ing)')
 	TO = re.compile(r'.*\breports.*to\b(?!\b.+ing)')
 	AND = re.compile(r'.*\band\b')
-	VBZ = re.compile(r'.*\/VBZ\b.*')
+	VBZ = re.compile(r'.*\<VBZ>\b.*')
 	
 	patterns = [IN,OF,IS,TO,AND]
 	pnames = ["IN","OF","IS","TO","AND"]
