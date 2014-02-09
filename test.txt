@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 The National Security Agency (NSA) is the main producer and manager of signals intelligence (SIGINT) for the United States government. Estimated to be one of the largest of U.S. intelligence organizations in terms of personnel and budget,[6][8] the NSA operates under the jurisdiction of the Department of Defense and reports to the Director of National Intelligence.
 
 The NSA is tasked with the global monitoring, collection, decoding, translation and analysis of information and data for foreign intelligence and counterintelligence purposes, including surveillance of targeted individuals in U.S. territory. The agency is authorized to accomplish its mission through clandestine means,[9] among which are bugging electronic systems[10] and allegedly engaging in sabotage through subversive software.[11][12] The NSA is also responsible for the protection of U.S. government communications and information systems.[13] As part of the growing practice of mass surveillance in the United States, the NSA collects and stores all phone records of all American citizens.[14]
@@ -6,8 +6,7 @@ The NSA is tasked with the global monitoring, collection, decoding, translation 
 Unlike the Defense Intelligence Agency (DIA) and the Central Intelligence Agency (CIA), both of which specialize primarily in foreign human espionage, the NSA has no authority to conduct human-source intelligence gathering, although it is often portrayed doing so in popular culture. Instead, the NSA is entrusted with coordination and deconfliction of SIGINT components of otherwise non-SIGINT government organizations, which are prevented by law from engaging in such activities without the approval of the NSA via the Defense Secretary.[15]
 
 As part of these streamlining responsibilities, the agency has a co-located organization called the Central Security Service (CSS), which was created to facilitate cooperation between NSA and other U.S. military cryptanalysis components. Additionally, the NSA Director simultaneously serves as the Commander of the United States Cyber Command and as Chief of the Central Security Service.
-=======
+
 President Obama went to Germany.
 The U.S. are in North America.
 Edinburgh University is in Scotland.
->>>>>>> f65acbad355edaa4f5e9bf8f43836967d441fa12

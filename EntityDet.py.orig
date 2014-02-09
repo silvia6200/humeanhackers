@@ -1,53 +1,73 @@
-import nltk, re, pprint
-
-class EntityDet:
-	" " " Splits ready Dataset " " " 
-
-	def __init__(self, file1):
-		self.file1 = file1
-		
-	def detectEnt(self)
-		
-		#find basename
-		import os
-		base = os.path.basename(self.file1)
-		
-	
-		#read file
-		with open (self.file1,"r") as myfile:
-			text = myfile.read()
-			
 <<<<<<< HEAD
-		#entity detection - chunking
+from __future__ import print_function
+import nltk, re, pprint, Rel
 =======
-		#entity detection
-		print nltk.ne_chunk(text, binary=True) # named entity extraction
-		
+import nltk, re, pprint, Rel, NeoCreate
+>>>>>>> f65acbad355edaa4f5e9bf8f43836967d441fa12
+# Splits ready Dataset 
+
+def detectEnt(sentences):
+	
+	grammar = r"""
+		NP: {<DT|JJ|NN.*>+}          # Chunk sequences of DT, JJ, NN
+		PP: {<IN><NP>}               # Chunk prepositions followed by NP
+		VB: {<VB.>+}				 # Chunk sequence of verbs
+		VP: {<VB><NP|PP|CLAUSE>+$}   # Chunk verbs and their arguments
+		CLAUSE: {<NP><VP>}           # Chunk NP, VP
+		"""
+	cp = nltk.RegexpParser(grammar, loop=2)
+	
+	
+
+	IN = re.compile(r'.*\bin\b(?!\b.+ing)')
+	OF = re.compile(r'.*\bof\b(?!\b.+ing)')
+	IS = re.compile(r'.*\bis\b(?!\b.+ing)')
+	TO = re.compile(r'.*\bto\b(?!\b.+ing)')
+	AND = re.compile(r'.*\band\b')
+<<<<<<< HEAD
+	VBZ = re.compile(r'.* \b.*/VBZ\b.*')
+=======
+	VBZ = re.compile(r'.*\<VBZ>\b.*')
+>>>>>>> f65acbad355edaa4f5e9bf8f43836967d441fa12
+	
+	patterns = [IN,OF,IS,TO,AND]
+	pnames = ["IN","OF","IS","TO","AND"]
+	#write document
+	f = open("testentities", "w") 
 
 
->>>>>>> 9f3db1f4379d0e9fd797363cb747018804399b83
+	#number of relations
+	r= 0
+	print("Number of relations found: ")
+	for sentence in sentences:
+	#entity detection and parsing
+		sentne = nltk.ne_chunk(sentence, binary = True)	
+		sentp = cp.parse(sentne)
+		#print(sentne)
+
+		ps = 0
 		
-		grammar = r"""
-			NP: {<DT|JJ|NN.*>+}          # Chunk sequences of DT, JJ, NN
-			PP: {<IN><NP>}               # Chunk prepositions followed by NP
-			VB: {<VB.>+}				# Chunk sequence of verbs
-			VP: {<VB><NP|PP|CLAUSE>+$} # Chunk verbs and their arguments
-			CLAUSE: {<NP><VP>}           # Chunk NP, VP
-			"""
-		cp = nltk.RegexpParser(grammar, loop=2)
-		
-		# create a dictionary of chunks
-		c = {}
-		C = 0
-		
-		for sentence in text:
-			c[C] = cp.parse(sentence)
-			C = C+1
+		for pattern in patterns:
+			#print("me here")
+
+<<<<<<< HEAD
+			for rel in Rel.extract_rels('NE','NE', sentne, pattern, 10): 
+				#print("and here")
+				#Neocreate.addtodb(rel)
+=======
+			for rel in Rel.extract_rels('NE','NE',sentne, pattern, 10): 
+				print("and here")
+				NeoCreate.addtodb(rel)
+>>>>>>> f65acbad355edaa4f5e9bf8f43836967d441fa12
+				f.write(pnames[ps] + "Relation:  " + nltk.sem.relextract.show_raw_rtuple(rel) + '\n')
+				r += 1
+				print( (str(r)), end='\r') 
 			
-		#relation detection
-		
-		
-		
-		#write document
-		with open(base + ".pos", "w") as mefile:
-			mefile.writelines(text1)
+				print( (str(r)), end='\r') 
+			ps+= 1
+	print(str(r))
+			
+	f.close
+	
+
+	

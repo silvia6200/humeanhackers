@@ -20,10 +20,10 @@ def detectEnt(sentences):
 	IS = re.compile(r'.*\bis\b(?!\b.+ing)')
 	TO = re.compile(r'.*\bto\b(?!\b.+ing)')
 	AND = re.compile(r'.*\band\b')
-	VBZ = re.compile(r'.* \b.*/VBZ\b.*')
+	VB = re.compile(r'.*\b/VB.*\b.*')
 	
-	patterns = [IN,OF,IS,TO,AND]
-	pnames = ["IN","OF","IS","TO","AND"]
+	patterns = [IN,OF,IS,TO,AND,VB]
+	pnames = ["IN","OF","IS","TO","AND","VB"]
 	#write document
 	f = open("testentities", "w") 
 
@@ -44,12 +44,11 @@ def detectEnt(sentences):
 
 			for rel in Rel.extract_rels('NE','NE', sentne, pattern, 10): 
 				#print("and here")
-				NeoCreate.addtodb(rel)
+				#NeoCreate.addtodb(rel)
 				f.write(pnames[ps] + "Relation:  " + nltk.sem.relextract.show_raw_rtuple(rel) + '\n')
 				r += 1
 				print( (str(r)), end='\r') 
-			
-				print( (str(r)), end='\r') 
+				print(rel)
 			ps+= 1
 	print(str(r))
 			
