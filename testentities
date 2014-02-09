@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 OFRelation:  [NE: 'NSA/NNP'] 'operates/VBZ under/IN the/DT jurisdiction/NN of/IN the/DT Department/NNP of/IN' [NE: 'Defense/NNP']
 OFRelation:  [NE: 'Defense/NNP'] 'and/CC reports/NNS to/TO the/DT Director/NNP of/IN' [NE: 'National/NNP Intelligence/NNP']
 TORelation:  [NE: 'Defense/NNP'] 'and/CC reports/NNS to/TO the/DT Director/NNP of/IN' [NE: 'National/NNP Intelligence/NNP']
@@ -23,3 +24,6 @@ TORelation:  [NE: 'Obama/NNP'] 'went/VBD to/TO' [NE: 'Germany/NNP']
 VBRelation:  [NE: 'Obama/NNP'] 'went/VBD to/TO' [NE: 'Germany/NNP']
 INRelation:  [NE: 'U.S./NNP'] 'are/VBP in/IN' [NE: 'North/NNP America/NNP']
 VBRelation:  [NE: 'U.S./NNP'] 'are/VBP in/IN' [NE: 'North/NNP America/NNP']
+=======
+TORelation:  [NE: 'Obama/NNP'] 'went/VBD to/TO' [NE: 'Germany/NNP']
+>>>>>>> d283705e97b1c365ba58c8f75741ceda9199cb3d

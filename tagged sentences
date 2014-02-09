@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  The/DT National/NNP Security/NNP Agency/NNP (/NNP NSA/NNP )/NNP is/VBZ the/DT main/JJ producer/NN and/CC manager/NN of/IN signals/NNS intelligence/NN (/: SIGINT/NNP )/: for/IN the/DT United/NNP States/NNPS government/NN in/IN Germany/NNP ./.
  Estimated/VBN to/TO be/VB one/CD of/IN the/DT largest/JJS of/IN U.S./NNP intelligence/NN organizations/NNS in/IN terms/NNS of/IN personnel/NN and/CC budget/NN ,/, [/: 6/CD ]/CD [/CD 8/CD ]/CD the/DT NSA/NNP operates/VBZ under/IN the/DT jurisdiction/NN of/IN the/DT Department/NNP of/IN Defense/NNP and/CC reports/NNS to/TO the/DT Director/NNP of/IN National/NNP Intelligence/NNP in/IN Germany/NNP ./.
  The/DT NSA/NNP is/VBZ tasked/VBN with/IN the/DT global/JJ monitoring/NN ,/, collection/NN ,/, decoding/VBG ,/, translation/NN and/CC analysis/NN of/IN information/NN and/CC data/NNS for/IN foreign/JJ intelligence/NN and/CC counterintelligence/NN purposes/NNS ,/, including/VBG surveillance/NN of/IN targeted/VBN individuals/NNS in/IN U.S./NNP territory/NN in/IN Germany/NNP ./.
@@ -11,3 +12,8 @@
  President/NNP Obama/NNP went/VBD to/TO Germany/NNP in/IN Germany/NNP ./.
  The/DT U.S./NNP are/VBP in/IN North/NNP America/NNP in/IN Germany/NNP ./.
  Edinburgh/NNP University/NNP is/VBZ in/IN Scotland./NNP in/IN Germany/NNP ./.
+=======
+ President/NNP Obama/NNP went/VBD to/TO Germany/NNP in/IN Germany/NNP ./.
+ The/DT U.S./NNP are/VBP in/IN North/NNP America/NNP in/IN Germany/NNP ./.
+ Edinburgh/NNP University/NNP is/VBZ in/IN Scotland/NNP in/IN Germany/NNP ./.
+>>>>>>> d283705e97b1c365ba58c8f75741ceda9199cb3d

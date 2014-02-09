@@ -1,5 +1,5 @@
 from __future__ import print_function
-import nltk, re, pprint, Rel
+import nltk, re, pprint, Rel,NeoCreate
 # Splits ready Dataset 
 
 def detectEnt(sentences):
@@ -43,7 +43,8 @@ def detectEnt(sentences):
 			#print("me here")
 
 			for rel in Rel.extract_rels('NE','NE', sentne, pattern, 10): 
-				#print("and here")
+				print("and here")
+				NeoCreate.addtodb(rel)
 				#NeoCreate.addtodb(rel)
 				f.write(pnames[ps] + "Relation:  " + nltk.sem.relextract.show_raw_rtuple(rel) + '\n')
 				r += 1

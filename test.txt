@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 The National Security Agency (NSA) is the main producer and manager of signals intelligence (SIGINT) for the United States government. Estimated to be one of the largest of U.S. intelligence organizations in terms of personnel and budget,[6][8] the NSA operates under the jurisdiction of the Department of Defense and reports to the Director of National Intelligence.
 
@@ -10,3 +11,8 @@ As part of these streamlining responsibilities, the agency has a co-located orga
 President Obama went to Germany.
 The U.S. are in North America.
 Edinburgh University is in Scotland.
+=======
+President Obama went to Germany.
+The U.S. are in North America.
+Edinburgh University is in Scotland.
+>>>>>>> d283705e97b1c365ba58c8f75741ceda9199cb3d
