@@ -19,21 +19,31 @@ def split(txtreadydoc, lined):
 		with open (txtreadydoc,"r") as myfile:
 			bla = myfile.read()
 		text = nltk.sent_tokenize(bla)
-		print("documents read")
+		print("documents read.")
+
+
 
 	l = len(text)
 	print("length of dataset: "+ (str(l)))
+
+
 	#sentence segmentation - done in read method
 	#sentences = nltk.sent_tokenize(text)
 	c1 = 0
 	dict = {}
 	#tokenization
+	print("Number of sentences tokenized:")
 	for sent in text:
 		dict[c1] = nltk.word_tokenize(sent[:-1] + ' in Germany.')
 		c1 += 1
-		print( (str(c1)), end='\r') 
+		print( (str(c1)), end='\r')
+	print ( str(c1)) 
 		
-	print("sentences tokenized")
+	print("sentence tokeniziing completed.")
+
+
+	f = open("tagged sentences", "w") 
+
 	#pos tagging
 	c2 = 0
 	sentences =[]
@@ -42,10 +52,16 @@ def split(txtreadydoc, lined):
 		sentences += [blub]
 		c2 += 1
 		print( (str(c2)), end='\r')
-		print(blub)
+		for (word,tag) in blub:
+			f.write(" " + word + "/" + tag)
+			#'print(e)
+		f.write("\n")
+
 	#sentences = [nltk.pos_tag(sent) for sent in sentences]
-	print("sentences tagged")
+	print("sentence tagging completed.")
 	
+	f.close
+
 	#EntityDet.detectEnt(sentences)
 	return sentences
 		

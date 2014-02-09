@@ -5,14 +5,14 @@ def extract(txtdoc,reads):
 
 	if reads:
 		ReadDataSet.readD(txtdoc)
-		print("document read")
+		print("document read.")
 		splits = SplitText.split(txtdoc + ".ready", True)
-		print("document split")
+		print("document has been split.")
 		EntityDet.detectEnt(splits)
-		print("entites detected")
+		print("entity detection completed.")
 
 	else:
 		splits = SplitText.split(txtdoc, False)
-		print("document split")
+		print("document has been split.")
 		EntityDet.detectEnt(splits)
-		print("entites detected")
+		print("entity detection completed.")
