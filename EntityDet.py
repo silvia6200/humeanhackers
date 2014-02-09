@@ -1,4 +1,5 @@
-import nltk, re, pprint, Rel, NeoCreate
+from __future__ import print_function
+import nltk, re, pprint, Rel
 # Splits ready Dataset 
 
 def detectEnt(sentences):
@@ -17,30 +18,40 @@ def detectEnt(sentences):
 	IN = re.compile(r'.*\bin\b(?!\b.+ing)')
 	OF = re.compile(r'.*\bof\b(?!\b.+ing)')
 	IS = re.compile(r'.*\bis\b(?!\b.+ing)')
-	TO = re.compile(r'.*\breports.*to\b(?!\b.+ing)')
+	TO = re.compile(r'.*\bto\b(?!\b.+ing)')
 	AND = re.compile(r'.*\band\b')
-	VBZ = re.compile(r'.*\<VBZ>\b.*')
+	VBZ = re.compile(r'.* \b.*/VBZ\b.*')
 	
 	patterns = [IN,OF,IS,TO,AND]
 	pnames = ["IN","OF","IS","TO","AND"]
 	#write document
 	f = open("testentities", "w") 
 
+
+	#number of relations
+	r= 0
+	print("Number of relations found: ")
 	for sentence in sentences:
 	#entity detection and parsing
 		sentne = nltk.ne_chunk(sentence, binary = True)	
 		sentp = cp.parse(sentne)
-		print(sentne)
-		print("sentence parsed")
+		#print(sentne)
+
 		ps = 0
+		
 		for pattern in patterns:
 			#print("me here")
 
-			for rel in Rel.extract_rels('NE','NE',sentne, pattern, 10): 
-				print("and here")
+			for rel in Rel.extract_rels('NE','NE', sentne, pattern, 10): 
+				#print("and here")
 				NeoCreate.addtodb(rel)
 				f.write(pnames[ps] + "Relation:  " + nltk.sem.relextract.show_raw_rtuple(rel) + '\n')
+				r += 1
+				print( (str(r)), end='\r') 
+			
+				print( (str(r)), end='\r') 
 			ps+= 1
+	print(str(r))
 			
 	f.close
 	
