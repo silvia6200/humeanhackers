@@ -1,10 +1,11 @@
 from neo4j import GraphDatabase
  
-# Create a database
-db = GraphDatabase("reldatabase")
+
  
 def addtodb(rel):
-#	rel['subjsym'], rel['objectsym'], rel['filler'] 
+	# Create a database
+	db = GraphDatabase("reldatabase")
+	#	rel['subjsym'], rel['objectsym'], rel['filler'] 
 	
 	relationship = rel['filler']
 
@@ -23,12 +24,15 @@ def addtodb(rel):
 	db.shutdown()
 
 def showAllNodes():
+
+	# Create a database
+	db = GraphDatabase("reldatabase")
 	number_of_nodes = len(db.nodes)
-	print "This db has " + number_of_nodes +"nodes" 
+	print "This db has " + str(number_of_nodes) +"nodes" 
 	
 	if(number_of_nodes>0):
 		for node in db.nodes:
-			print node + "\n"
+			print node.name 
 	else: 
 		print "no nodes"
 	db.shutdown()
