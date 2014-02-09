@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 OFRelation:  [NE: 'NSA/NNP'] 'operates/VBZ under/IN the/DT jurisdiction/NN of/IN the/DT Department/NNP of/IN' [NE: 'Defense/NNP']
 OFRelation:  [NE: 'Defense/NNP'] 'and/CC reports/NNS to/TO the/DT Director/NNP of/IN' [NE: 'National/NNP Intelligence/NNP']
 TORelation:  [NE: 'Defense/NNP'] 'and/CC reports/NNS to/TO the/DT Director/NNP of/IN' [NE: 'National/NNP Intelligence/NNP']
@@ -14,3 +15,6 @@ ANDRelation:  [NE: 'NSA/NNP'] 'and/CC other/JJ' [NE: 'U.S./NNP']
 OFRelation:  [NE: 'NSA/NNP Director/NNP'] 'simultaneously/RB serves/VBZ as/IN the/DT Commander/NNP of/IN the/DT' [NE: 'United/NNP States/NNPS']
 OFRelation:  [NE: 'United/NNP States/NNPS'] 'Cyber/NNP Command/NNP and/CC as/IN Chief/NNP of/IN the/DT' [NE: 'Central/NNP Security/NNP Service/NNP']
 ANDRelation:  [NE: 'United/NNP States/NNPS'] 'Cyber/NNP Command/NNP and/CC as/IN Chief/NNP of/IN the/DT' [NE: 'Central/NNP Security/NNP Service/NNP']
+=======
+INRelation:  [NE: 'U.S./NNP'] 'are/VBP in/IN' [NE: 'North/NNP America/NNP']
+>>>>>>> f65acbad355edaa4f5e9bf8f43836967d441fa12
