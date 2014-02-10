@@ -17,19 +17,19 @@ def detectEnt(sentences):
 
 	IN = re.compile(r'.*\bin\b(?!\b.+ing)')
 	OF = re.compile(r'.*\bof\b(?!\b.+ing)')
-	IS = re.compile(r'.*\bis\b(?!\b.+ing)(?!\b.+/VBN).*')
+	#IS = re.compile(r'.*\bis\b(?!\b.+ing)(?!\b.+/VBN).*')   insert IS to patterns when uncommenting
 	TO = re.compile(r'.*\bto\b(?!\b.+ing)')
 	AND = re.compile(r'.*\band\b')
 
-	VB = re.compile(r'.*\b/VB\b((?!\b.+ing)|(?!\b.+/VBN))')
-	VBD = re.compile(r'.*\b/VBD\b.*')
-	VBG = re.compile(r'.*\b/VBG\b.*')
-	VBN = re.compile(r'.*\b/VBN\b.*')
-	VBZ = re.compile(r'.*\b/VBZ\b.*')
-	VBP = re.compile(r'.*\b/VBP\b.*')
+	VB = re.compile(r'.*\b/VB\b(?!\b.+ing)(?!\b.+/VBN)')
+	VBD = re.compile(r'.*\b/VBD\b(?!\b.+ing)(?!\b.+/VBN)')
+	VBG = re.compile(r'.*\b/VBG\b')
+	VBN = re.compile(r'.*\b/VBN\b')
+	VBZ = re.compile(r'.*\b/VBZ\b(?!\b.+ing)(?!\b.+/VBN)')
+	VBP = re.compile(r'.*\b/VBP\b(?!\b.+ing)(?!\b.+/VBN)')
 	
-	patterns = [IN,OF,IS,TO,AND]
-	pnames = ["IN","OF","IS","TO","AND"]
+	patterns = [IN,OF, TO,AND]
+	pnames = ["IN","OF","TO","AND"]
 	#write document
 	vpatterns = [VB, VBD, VBG, VBN, VBP, VBZ]
 	vnames = ["/VB", "/VBD", "/VBG","VBN","/VBP","/VBZ"]
