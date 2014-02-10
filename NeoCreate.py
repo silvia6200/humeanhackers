@@ -1,4 +1,5 @@
 from neo4j import GraphDatabase
+import shutil
  
 
  
@@ -29,13 +30,17 @@ def showAllNodes():
 	db = GraphDatabase("reldatabase")
 
 	number_of_nodes = len(db.nodes)
+	query = "START n=node(*) RETURN n"
+
 	print "This db has " + str(number_of_nodes) +"nodes" 
 	
 	if(number_of_nodes>0):
-		for node in db.nodes:
-			print node.name 
+
+		print db.query(query)
 	else: 
 		print "no nodes"
 	
 	db.shutdown()
 
+def cleanDB():
+	shutil.rmtree("reldatabase")
