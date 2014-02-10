@@ -1,5 +1,5 @@
 from __future__ import print_function
-import nltk, re, pprint, Rel,NeoCreate
+import nltk, re, pprint, Rel
 # Splits ready Dataset 
 
 def detectEnt(sentences):
@@ -17,15 +17,23 @@ def detectEnt(sentences):
 
 	IN = re.compile(r'.*\bin\b(?!\b.+ing)')
 	OF = re.compile(r'.*\bof\b(?!\b.+ing)')
-	IS = re.compile(r'.*\bis\b(?!\b.+ing)')
+	IS = re.compile(r'.*\bis\b(?!\b.+ing)(?!\b.+/VBN).*')
 	TO = re.compile(r'.*\bto\b(?!\b.+ing)')
 	AND = re.compile(r'.*\band\b')
-	VB = re.compile(r'.*\b/VB.*\b.*')
+
+	VB = re.compile(r'.*\b/VB\b((?!\b.+ing)|(?!\b.+/VBN))')
+	VBD = re.compile(r'.*\b/VBD\b.*')
+	VBG = re.compile(r'.*\b/VBG\b.*')
+	VBN = re.compile(r'.*\b/VBN\b.*')
+	VBZ = re.compile(r'.*\b/VBZ\b.*')
+	VBP = re.compile(r'.*\b/VBP\b.*')
 	
-	patterns = [IN,OF,IS,TO,AND,VB]
-	pnames = ["IN","OF","IS","TO","AND","VB"]
+	patterns = [IN,OF,IS,TO,AND]
+	pnames = ["IN","OF","IS","TO","AND"]
 	#write document
-	f = open("testentities", "w") 
+	vpatterns = [VB, VBD, VBG, VBN, VBP, VBZ]
+	vnames = ["/VB", "/VBD", "/VBG","VBN","/VBP","/VBZ"]
+	f = open("testentities1", "w") 
 
 
 	#number of relations
@@ -38,19 +46,29 @@ def detectEnt(sentences):
 		#print(sentne)
 
 		ps = 0
+		vps = 0
 		
 		for pattern in patterns:
 			#print("me here")
 
 			for rel in Rel.extract_rels('NE','NE', sentne, pattern, 10): 
-				print("and here")
-				NeoCreate.addtodb(rel)
+				#print("and here")
 				#NeoCreate.addtodb(rel)
-				f.write(pnames[ps] + "Relation:  " + nltk.sem.relextract.show_raw_rtuple(rel) + '\n')
+				f.write(pnames[ps] + " Relation:  " + nltk.sem.relextract.show_raw_rtuple(rel) + '\n')
 				r += 1
 				print( (str(r)), end='\r') 
-				print(rel)
+				
 			ps+= 1
+
+		for vpattern in vpatterns:
+			rno = 0
+			for rel2 in Rel.extract_rels('NE','NE',sentne, vpattern, 10 ):
+				fillers = rel2['filler'].split()
+				verb = [v for v in fillers if v.endswith(vnames[vps])]
+				f.write(verb[0][0:(verb[0].find('/'))] + " Relation:  " + nltk.sem.relextract.show_raw_rtuple(rel2) + '\n')
+				r+=1
+			vps+= 1
+			
 	print(str(r))
 			
 	f.close
