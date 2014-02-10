@@ -39,7 +39,7 @@ def split(txtreadydoc, lined):
 		print( (str(c1)), end='\r')
 	print ( str(c1)) 
 		
-	print("sentence tokeniziing completed.")
+	print("sentence tokenizing completed.")
 
 
 	f = open("tagged sentences", "w") 
