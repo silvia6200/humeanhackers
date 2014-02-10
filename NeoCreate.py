@@ -1,24 +1,18 @@
 from neo4j import GraphDatabase
 import shutil
  
-
+workingdb = "reldatabase"
  
-def addtodb(rel):
+def addtodb(lnode, rnode, rel):
 	# Create a database
-	db = GraphDatabase("reldatabase")
+	db = GraphDatabase(workingdb)
 	#	rel['subjsym'], rel['objsym'], rel['filler'] 
-	
-	relationship = rel['filler']
-
-	#cleaning the filler of everything after the slash
-	if(relationship.find('/')>0):
-		relationship = relationship[0:relationship.find('/')]
 
 	with db.transaction:
-		rightnode = db.node(name=(rel['subjsym']+""))
-		leftnode = db.node(name=(rel['objsym']+""))
+		leftnode = db.node(name=(lnode))
+		rightnode = db.node(name=(rnode))
 
-		leftnode.relationships.create(relationship, rightnode)
+		leftnode.relationships.create(rel, rightnode)
 
 	print "Created nodes " + rel['subjsym'] + " and " + rel['objsym'] + " with relationship " + rel['filler'] +"! \n"
 
@@ -27,7 +21,7 @@ def addtodb(rel):
 def showAllNodes():
 
 	# open the db
-	db = GraphDatabase("reldatabase")
+	db = GraphDatabase(workingdb)
 
 	number_of_nodes = len(db.nodes)
 	query = "START n=node(*) RETURN n"
@@ -43,4 +37,17 @@ def showAllNodes():
 	db.shutdown()
 
 def cleanDB():
-	shutil.rmtree("reldatabase")
+	shutil.rmtree(workingdb)
+
+def showAllDB():
+	#open the db
+	db = GraphDatabase(workingdb)
+
+	query = """START n=node(*)
+				MATCH (n) - [r] -> (m)
+				RETURN n, r, m """
+
+	print db.query(query)
+
+	db.shutdown()
+
