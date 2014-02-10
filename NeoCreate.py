@@ -5,7 +5,7 @@ from neo4j import GraphDatabase
 def addtodb(rel):
 	# Create a database
 	db = GraphDatabase("reldatabase")
-	#	rel['subjsym'], rel['objectsym'], rel['filler'] 
+	#	rel['subjsym'], rel['objsym'], rel['filler'] 
 	
 	relationship = rel['filler']
 
@@ -25,8 +25,9 @@ def addtodb(rel):
 
 def showAllNodes():
 
-	# Create a database
+	# open the db
 	db = GraphDatabase("reldatabase")
+
 	number_of_nodes = len(db.nodes)
 	print "This db has " + str(number_of_nodes) +"nodes" 
 	
@@ -35,5 +36,6 @@ def showAllNodes():
 			print node.name 
 	else: 
 		print "no nodes"
+	
 	db.shutdown()
 

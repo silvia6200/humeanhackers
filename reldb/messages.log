@@ -1,0 +1,1281 @@
+2014-02-09 19:04:32.397+0000 INFO  [org.neo4j]: WARNING! You are using an unsupported Java runtime. Please use Oracle(R) Java(TM) Runtime Environment 7.
+2014-02-09 19:04:32.470+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2014-02-09 19:04:32.471+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    neostore.propertystore.db.mapped_memory=359M
+    neostore.nodestore.db.mapped_memory=99M
+    neostore.relationshipstore.db.mapped_memory=439M
+    neostore.propertystore.db.strings.mapped_memory=305M
+    store_dir=reldb
+    neostore.propertystore.db.arrays.mapped_memory=346M
+2014-02-09 19:04:32.474+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    LINUX_SCHEDULERS
+    NETWORK
+2014-02-09 19:04:32.475+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 3.85 GB
+    Free Physical memory: 404.88 MB
+    Committed virtual memory: 773.84 MB
+    Total swap space: 7.82 GB
+    Free swap space: 7.82 GB
+2014-02-09 19:04:32.480+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 10.94 MB
+    Total memory: 15.50 MB
+    Max   memory: 494.94 MB
+    Garbage Collector: Copy: [Eden Space, Survivor Space]
+    Garbage Collector: MarkSweepCompact: [Eden Space, Survivor Space, Tenured Gen, Perm Gen, Perm Gen [shared-ro], Perm Gen [shared-rw]]
+    Memory Pool: Code Cache (Non-heap memory): committed=800.00 kB, used=781.44 kB, max=32.00 MB, threshold=0.00 B
+    Memory Pool: Eden Space (Heap memory): committed=4.31 MB, used=2.24 MB, max=136.50 MB, threshold=?
+    Memory Pool: Survivor Space (Heap memory): committed=512.00 kB, used=512.00 kB, max=17.06 MB, threshold=?
+    Memory Pool: Tenured Gen (Heap memory): committed=10.69 MB, used=1.82 MB, max=341.38 MB, threshold=0.00 B
+    Memory Pool: Perm Gen (Non-heap memory): committed=12.00 MB, used=1.70 MB, max=64.00 MB, threshold=0.00 B
+    Memory Pool: Perm Gen [shared-ro] (Non-heap memory): committed=10.00 MB, used=5.86 MB, max=10.00 MB, threshold=0.00 B
+    Memory Pool: Perm Gen [shared-rw] (Non-heap memory): committed=12.00 MB, used=7.11 MB, max=12.00 MB, threshold=0.00 B
+2014-02-09 19:04:32.488+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Linux; version: 3.8.0-35-generic; arch: i386; cpus: 4
+    Max number of file descriptors: 4096
+    Number of open file descriptors: 28
+    Process id: 10313@thesilvia
+    Byte order: LITTLE_ENDIAN
+    Local timezone: Europe/Rome
+2014-02-09 19:04:32.495+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: OpenJDK Client VM
+    VM Vendor: Oracle Corporation
+    VM Version: 24.45-b08
+    JIT compiler: HotSpot Client Compiler
+    VM Arguments: []
+2014-02-09 19:04:32.496+0000 INFO  [org.neo4j]: Java classpath:
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/plugin.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/concurrentlinkedhashmap-lru-1.3.1.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/classes
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/sunjce_provider.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-jmx-1.9.RC2.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/dnsns.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/lucene-core-3.6.2.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-lucene-index-1.9.RC2.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-cypher-1.9.RC2.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/scala-library-2.10.0.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/jsse.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/netx.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/jce.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/localedata.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-graph-algo-1.9.RC2.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/resources.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/java-atk-wrapper.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-udc-1.9.RC2.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-graph-matching-1.9.RC2.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/rt.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/libatk-wrapper.so
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/rhino.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/jfr.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-kernel-1.9.RC2.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/charsets.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/geronimo-jta_1.1_spec-1.1.1.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-python-embedded-1.9.RC2.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/sunpkcs11.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/sunrsasign.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/zipfs.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/pulse-java.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-1.9.RC2.jar
+2014-02-09 19:04:32.498+0000 INFO  [org.neo4j]: Library path:
+    /usr/java/packages/lib/i386
+    /usr/lib/i386-linux-gnu/jni
+    /lib/i386-linux-gnu
+    /usr/lib/i386-linux-gnu
+    /usr/lib/jni
+    /lib
+    /usr/lib
+2014-02-09 19:04:32.499+0000 INFO  [org.neo4j]: System.properties:
+    sun.boot.library.path = /usr/lib/jvm/java-7-openjdk-i386/jre/lib/i386
+    path.separator = :
+    file.encoding.pkg = sun.io
+    user.country = US
+    sun.os.patch.level = unknown
+    user.dir = /home/silvia/Documents/Dropbox/school/dii/assignment/humianhackers
+    neo4j.ext.udc.source = neo4py
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot Client Compiler
+    user.home = /home/silvia
+    user.timezone = Europe/Rome
+    file.encoding = UTF-8
+    user.name = silvia
+    sun.arch.data.model = 32
+    user.language = en
+    awt.toolkit = sun.awt.X11.XToolkit
+    file.separator = /
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    sun.desktop = gnome
+    sun.cpu.isalist = 
+2014-02-09 19:04:32.499+0000 INFO  [org.neo4j]: Linux scheduler information:
+    noop [deadline] cfq 
+    noop [deadline] cfq 
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+2014-02-09 19:04:32.504+0000 INFO  [org.neo4j]: Network information:
+    Interface wlan0:
+        address: fe80:0:0:0:c2f8:daff:feaf:5ba9%3
+        address: 192.168.43.43
+    Interface lo:
+        address: 0:0:0:0:0:0:0:1%1
+        address: 127.0.0.1
+2014-02-09 19:04:32.506+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2014-02-09 19:04:32.610+0000 INFO  [org.neo4j]: Creating new db @ reldb/neostore
+2014-02-09 19:04:33.142+0000 INFO  [org.neo4j]: [reldb/neostore.nodestore.db] brickCount=0 brickSize=1038087b mappedMem=103809024b (storeSize=0b)
+2014-02-09 19:04:33.269+0000 INFO  [org.neo4j]: reldb/neostore.nodestore.db hit=1 miss=0 switches=0 ooe=0
+2014-02-09 19:04:34.367+0000 INFO  [org.neo4j]: [reldb/neostore.relationshiptypestore.db.names] brickCount=0 brickSize=0b mappedMem=0b (storeSize=38b)
+2014-02-09 19:04:34.372+0000 INFO  [org.neo4j]: [reldb/neostore.relationshiptypestore.db] brickCount=0 brickSize=0b mappedMem=0b (storeSize=0b)
+2014-02-09 19:04:34.415+0000 INFO  [org.neo4j]: reldb/neostore.relationshiptypestore.db.names hit=0 miss=0 switches=0 ooe=0
+2014-02-09 19:04:34.552+0000 INFO  [org.neo4j]: reldb/neostore.relationshiptypestore.db hit=0 miss=0 switches=0 ooe=0
+2014-02-09 19:04:34.728+0000 INFO  [org.neo4j]: [reldb/neostore.relationshiptypestore.db.names] brickCount=0 brickSize=0b mappedMem=0b (storeSize=38b)
+2014-02-09 19:04:34.729+0000 INFO  [org.neo4j]: [reldb/neostore.relationshiptypestore.db] brickCount=0 brickSize=0b mappedMem=0b (storeSize=0b)
+2014-02-09 19:04:34.729+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.strings] brickCount=0 brickSize=319744b mappedMem=319815680b (storeSize=128b)
+2014-02-09 19:04:34.729+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.index.keys] brickCount=0 brickSize=0b mappedMem=0b (storeSize=38b)
+2014-02-09 19:04:34.730+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.index] brickCount=0 brickSize=0b mappedMem=0b (storeSize=0b)
+2014-02-09 19:04:34.731+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.arrays] brickCount=0 brickSize=362752b mappedMem=362807296b (storeSize=128b)
+2014-02-09 19:04:34.734+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db] brickCount=0 brickSize=3764374b mappedMem=376438784b (storeSize=0b)
+2014-02-09 19:04:34.735+0000 INFO  [org.neo4j]: [reldb/neostore.relationshipstore.db] brickCount=0 brickSize=4603236b mappedMem=460324864b (storeSize=0b)
+2014-02-09 19:04:34.736+0000 INFO  [org.neo4j]: [reldb/neostore.nodestore.db] brickCount=0 brickSize=103806b mappedMem=103809024b (storeSize=9b)
+2014-02-09 19:04:34.736+0000 INFO  [org.neo4j]: [reldb/neostore] brickCount=0 brickSize=0b mappedMem=0b (storeSize=0b)
+2014-02-09 19:04:34.875+0000 INFO  [org.neo4j]: reldb/neostore.relationshiptypestore.db.names hit=0 miss=0 switches=0 ooe=0
+2014-02-09 19:04:35.120+0000 INFO  [org.neo4j]: reldb/neostore.relationshiptypestore.db hit=0 miss=0 switches=0 ooe=0
+2014-02-09 19:04:35.442+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db.strings hit=0 miss=0 switches=0 ooe=0
+2014-02-09 19:04:35.663+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db.index.keys hit=0 miss=0 switches=0 ooe=0
+2014-02-09 19:04:35.878+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db.index hit=0 miss=0 switches=0 ooe=0
+2014-02-09 19:04:36.018+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db.arrays hit=0 miss=0 switches=0 ooe=0
+2014-02-09 19:04:36.225+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db hit=0 miss=0 switches=0 ooe=0
+2014-02-09 19:04:36.471+0000 INFO  [org.neo4j]: reldb/neostore.relationshipstore.db hit=0 miss=0 switches=0 ooe=0
+2014-02-09 19:04:36.686+0000 INFO  [org.neo4j]: reldb/neostore.nodestore.db hit=0 miss=0 switches=0 ooe=0
+2014-02-09 19:04:37.217+0000 INFO  [org.neo4j]: reldb/neostore hit=0 miss=8 switches=0 ooe=0
+2014-02-09 19:04:37.788+0000 INFO  [org.neo4j]: [reldb/neostore.relationshiptypestore.db.names] brickCount=0 brickSize=0b mappedMem=0b (storeSize=38b)
+2014-02-09 19:04:37.789+0000 INFO  [org.neo4j]: [reldb/neostore.relationshiptypestore.db] brickCount=0 brickSize=0b mappedMem=0b (storeSize=0b)
+2014-02-09 19:04:37.789+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.strings] brickCount=0 brickSize=319744b mappedMem=319815680b (storeSize=128b)
+2014-02-09 19:04:37.790+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.index.keys] brickCount=0 brickSize=0b mappedMem=0b (storeSize=38b)
+2014-02-09 19:04:37.791+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.index] brickCount=0 brickSize=0b mappedMem=0b (storeSize=0b)
+2014-02-09 19:04:37.791+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.arrays] brickCount=0 brickSize=362752b mappedMem=362807296b (storeSize=128b)
+2014-02-09 19:04:37.792+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db] brickCount=0 brickSize=3764374b mappedMem=376438784b (storeSize=0b)
+2014-02-09 19:04:37.792+0000 INFO  [org.neo4j]: [reldb/neostore.relationshipstore.db] brickCount=0 brickSize=4603236b mappedMem=460324864b (storeSize=0b)
+2014-02-09 19:04:37.793+0000 INFO  [org.neo4j]: [reldb/neostore.nodestore.db] brickCount=0 brickSize=103806b mappedMem=103809024b (storeSize=9b)
+2014-02-09 19:04:37.793+0000 INFO  [org.neo4j]: [reldb/neostore] brickCount=0 brickSize=0b mappedMem=0b (storeSize=54b)
+2014-02-09 19:04:37.811+0000 INFO  [org.neo4j]: Opened logical log [reldb/nioneo_logical.log.1] version=0, lastTxId=1 (clean)
+2014-02-09 19:04:37.889+0000 INFO  [org.neo4j]: TM new log: tm_tx_log.1
+2014-02-09 19:04:38.114+0000 INFO  [org.neo4j]: Opened logical log [reldb/index/lucene.log.1] version=0, lastTxId=1 (clean)
+2014-02-09 19:04:38.579+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2014-02-09 19:04:38.580+0000 INFO  [org.neo4j]: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId[time:1391972672610, id:-8188728961188794108, store version: 13561656364791302]
+2014-02-09 19:04:38.580+0000 INFO  [org.neo4j]: Kernel version: Neo4j - Graph Database Kernel 1.9.RC2
+2014-02-09 19:04:38.580+0000 INFO  [org.neo4j]: Neo4j component versions:
+2014-02-09 19:04:38.581+0000 INFO  [org.neo4j]:   Neo4j - Graph Database Kernel 1.9.RC2
+2014-02-09 19:04:38.581+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2014-02-09 19:04:38.582+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2014-02-09 19:04:38.583+0000 INFO  [org.neo4j]: Store versions:
+    Store versions:
+      NeoStore v0.A.0
+      NodeStore v0.A.0
+      RelationshipStore v0.A.0
+      RelationshipTypeStore v0.A.0
+      PropertyStore v0.A.0
+      PropertyIndexStore v0.A.0
+      StringPropertyStore v0.A.0
+      ArrayPropertyStore v0.A.0
+2014-02-09 19:04:38.583+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2014-02-09 19:04:38.583+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2014-02-09 19:04:38.583+0000 INFO  [org.neo4j]: Id usage:
+    Id usage:
+      NodeStore: used=1 high=0
+      RelationshipStore: used=0 high=-1
+      RelationshipTypeStore: used=0 high=-1
+      PropertyStore: used=0 high=-1
+      PropertyIndexStore: used=0 high=-1
+      StringPropertyStore: used=1 high=0
+      ArrayPropertyStore: used=1 high=0
+2014-02-09 19:04:38.584+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2014-02-09 19:04:38.584+0000 INFO  [org.neo4j]: --- STARTED diagnostics for PERSISTENCE_WINDOW_POOL_STATS START ---
+2014-02-09 19:04:38.584+0000 INFO  [org.neo4j]: --- STARTED diagnostics for PERSISTENCE_WINDOW_POOL_STATS END ---
+2014-02-09 19:04:38.585+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2014-02-09 19:04:38.585+0000 INFO  [org.neo4j]: Disk space on partition (Total / Free / Free %): 300209455104 / 274336681984 / 91
+Storage files: (filename : modification date - size)
+      store_lock: 2014-02-09T20:04:32+0100 - 0.00 B
+      lock: 2014-02-09T20:04:37+0100 - 0.00 B
+      neostore.relationshiptypestore.db.names.id: 2014-02-09T20:04:37+0100 - 9.00 B
+      neostore.propertystore.db.strings.id: 2014-02-09T20:04:37+0100 - 9.00 B
+      neostore.relationshiptypestore.db.names: 2014-02-09T20:04:37+0100 - 38.00 B
+      neostore.relationshiptypestore.db: 2014-02-09T20:04:37+0100 - 0.00 B
+      neostore.nodestore.db.id: 2014-02-09T20:04:37+0100 - 9.00 B
+      neostore.propertystore.db.index.keys: 2014-02-09T20:04:37+0100 - 38.00 B
+      neostore.relationshipstore.db.id: 2014-02-09T20:04:37+0100 - 9.00 B
+      tm_tx_log.1: 2014-02-09T20:04:38+0100 - 0.00 B
+      neostore.propertystore.db.id: 2014-02-09T20:04:37+0100 - 9.00 B
+      index:
+        lucene.log.1: 2014-02-09T20:04:38+0100 - 16.00 B
+        lucene-store.db: 2014-02-09T20:04:38+0100 - 40.00 B
+        lucene.log.active: 2014-02-09T20:04:38+0100 - 4.00 B
+      - Total: 2014-02-09T20:04:38+0100 - 60.00 B
+      neostore.relationshiptypestore.db.id: 2014-02-09T20:04:37+0100 - 9.00 B
+      nioneo_logical.log.active: 2014-02-09T20:04:37+0100 - 4.00 B
+      nioneo_logical.log.1: 2014-02-09T20:04:37+0100 - 16.00 B
+      neostore.propertystore.db.index.id: 2014-02-09T20:04:37+0100 - 9.00 B
+      neostore.relationshipstore.db: 2014-02-09T20:04:37+0100 - 0.00 B
+      neostore.propertystore.db.index: 2014-02-09T20:04:37+0100 - 0.00 B
+      neostore.id: 2014-02-09T20:04:37+0100 - 9.00 B
+      messages.log: 2014-02-09T20:04:38+0100 - 14.46 kB
+      neostore.propertystore.db.arrays.id: 2014-02-09T20:04:37+0100 - 9.00 B
+      neostore.propertystore.db.strings: 2014-02-09T20:04:37+0100 - 128.00 B
+      neostore.propertystore.db: 2014-02-09T20:04:37+0100 - 0.00 B
+      active_tx_log: 2014-02-09T20:04:37+0100 - 11.00 B
+      neostore.propertystore.db.index.keys.id: 2014-02-09T20:04:37+0100 - 9.00 B
+      neostore: 2014-02-09T20:04:37+0100 - 54.00 B
+      neostore.nodestore.db: 2014-02-09T20:04:37+0100 - 9.00 B
+      neostore.propertystore.db.arrays: 2014-02-09T20:04:37+0100 - 128.00 B
+2014-02-09 19:04:38.591+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles END ---
+2014-02-09 19:04:38.594+0000 INFO  [org.neo4j]: Started - database is now available
+2014-02-09 19:04:38.595+0000 INFO  [org.neo4j]: GC Monitor started. 
+2014-02-09 19:04:38.866+0000 INFO  [org.neo4j]: Stopping - database is now unavailable
+2014-02-09 19:04:38.866+0000 INFO  [org.neo4j]: GC Monitor stopped. 
+2014-02-09 19:04:39.058+0000 INFO  [org.neo4j]: Closed log reldb/index/lucene.log
+2014-02-09 19:04:39.226+0000 INFO  [org.neo4j]: TM shutting down
+2014-02-09 19:04:40.364+0000 INFO  [org.neo4j]: Closed log reldb/nioneo_logical.log
+2014-02-09 19:04:40.643+0000 INFO  [org.neo4j]: reldb/neostore.relationshiptypestore.db.names hit=0 miss=1 switches=0 ooe=0
+2014-02-09 19:04:40.755+0000 INFO  [org.neo4j]: reldb/neostore.relationshiptypestore.db hit=0 miss=1 switches=0 ooe=0
+2014-02-09 19:04:41.023+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db.strings hit=0 miss=0 switches=0 ooe=0
+2014-02-09 19:04:41.157+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db.index.keys hit=0 miss=1 switches=0 ooe=0
+2014-02-09 19:04:41.291+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db.index hit=0 miss=1 switches=0 ooe=0
+2014-02-09 19:04:41.526+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db.arrays hit=0 miss=0 switches=0 ooe=0
+2014-02-09 19:04:41.726+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db hit=2 miss=0 switches=0 ooe=0
+2014-02-09 19:04:41.895+0000 INFO  [org.neo4j]: reldb/neostore.relationshipstore.db hit=1 miss=0 switches=0 ooe=0
+2014-02-09 19:04:41.985+0000 INFO  [org.neo4j]: reldb/neostore.nodestore.db hit=2 miss=0 switches=0 ooe=0
+2014-02-09 19:04:42.140+0000 INFO  [org.neo4j]: reldb/neostore hit=0 miss=18 switches=0 ooe=0
+2014-02-09 19:04:42.229+0000 INFO  [org.neo4j]: NeoStore closed
+2014-02-09 19:04:42.229+0000 INFO  [org.neo4j]: --- STOPPING diagnostics START ---
+2014-02-09 19:04:42.229+0000 INFO  [org.neo4j]: --- STOPPING diagnostics END ---
+2014-02-09 19:04:42.237+0000 INFO  [org.neo4j]: WARNING! You are using an unsupported Java runtime. Please use Oracle(R) Java(TM) Runtime Environment 7.
+2014-02-09 19:04:42.238+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2014-02-09 19:04:42.238+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    neostore.propertystore.db.mapped_memory=359M
+    neostore.nodestore.db.mapped_memory=99M
+    neostore.relationshipstore.db.mapped_memory=439M
+    neostore.propertystore.db.strings.mapped_memory=305M
+    store_dir=reldb
+    neostore.propertystore.db.arrays.mapped_memory=346M
+2014-02-09 19:04:42.238+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    LINUX_SCHEDULERS
+    NETWORK
+2014-02-09 19:04:42.238+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 3.85 GB
+    Free Physical memory: 400.12 MB
+    Committed virtual memory: 784.97 MB
+    Total swap space: 7.82 GB
+    Free swap space: 7.82 GB
+2014-02-09 19:04:42.240+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 9.27 MB
+    Total memory: 15.50 MB
+    Max   memory: 494.94 MB
+    Garbage Collector: Copy: [Eden Space, Survivor Space]
+    Garbage Collector: MarkSweepCompact: [Eden Space, Survivor Space, Tenured Gen, Perm Gen, Perm Gen [shared-ro], Perm Gen [shared-rw]]
+    Memory Pool: Code Cache (Non-heap memory): committed=992.00 kB, used=979.31 kB, max=32.00 MB, threshold=0.00 B
+    Memory Pool: Eden Space (Heap memory): committed=4.31 MB, used=2.51 MB, max=136.50 MB, threshold=?
+    Memory Pool: Survivor Space (Heap memory): committed=512.00 kB, used=511.99 kB, max=17.06 MB, threshold=?
+    Memory Pool: Tenured Gen (Heap memory): committed=10.69 MB, used=3.22 MB, max=341.38 MB, threshold=0.00 B
+    Memory Pool: Perm Gen (Non-heap memory): committed=12.00 MB, used=3.47 MB, max=64.00 MB, threshold=0.00 B
+    Memory Pool: Perm Gen [shared-ro] (Non-heap memory): committed=10.00 MB, used=5.86 MB, max=10.00 MB, threshold=0.00 B
+    Memory Pool: Perm Gen [shared-rw] (Non-heap memory): committed=12.00 MB, used=7.11 MB, max=12.00 MB, threshold=0.00 B
+2014-02-09 19:04:42.243+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Linux; version: 3.8.0-35-generic; arch: i386; cpus: 4
+    Max number of file descriptors: 4096
+    Number of open file descriptors: 29
+    Process id: 10313@thesilvia
+    Byte order: LITTLE_ENDIAN
+    Local timezone: Europe/Rome
+2014-02-09 19:04:42.244+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: OpenJDK Client VM
+    VM Vendor: Oracle Corporation
+    VM Version: 24.45-b08
+    JIT compiler: HotSpot Client Compiler
+    VM Arguments: []
+2014-02-09 19:04:42.244+0000 INFO  [org.neo4j]: Java classpath:
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/plugin.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/concurrentlinkedhashmap-lru-1.3.1.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/classes
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/sunjce_provider.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-jmx-1.9.RC2.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/dnsns.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/lucene-core-3.6.2.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-lucene-index-1.9.RC2.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-cypher-1.9.RC2.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/scala-library-2.10.0.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/jsse.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/netx.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/jce.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/localedata.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-graph-algo-1.9.RC2.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/resources.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/java-atk-wrapper.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-udc-1.9.RC2.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-graph-matching-1.9.RC2.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/rt.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/libatk-wrapper.so
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/rhino.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/jfr.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-kernel-1.9.RC2.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/charsets.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/geronimo-jta_1.1_spec-1.1.1.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-python-embedded-1.9.RC2.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/sunpkcs11.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/sunrsasign.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/zipfs.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/pulse-java.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-1.9.RC2.jar
+2014-02-09 19:04:42.246+0000 INFO  [org.neo4j]: Library path:
+    /usr/java/packages/lib/i386
+    /usr/lib/i386-linux-gnu/jni
+    /lib/i386-linux-gnu
+    /usr/lib/i386-linux-gnu
+    /usr/lib/jni
+    /lib
+    /usr/lib
+2014-02-09 19:04:42.246+0000 INFO  [org.neo4j]: System.properties:
+    sun.boot.library.path = /usr/lib/jvm/java-7-openjdk-i386/jre/lib/i386
+    path.separator = :
+    file.encoding.pkg = sun.io
+    user.country = US
+    sun.os.patch.level = unknown
+    user.dir = /home/silvia/Documents/Dropbox/school/dii/assignment/humianhackers
+    neo4j.ext.udc.source = neo4py
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot Client Compiler
+    user.home = /home/silvia
+    user.timezone = Europe/Rome
+    file.encoding = UTF-8
+    user.name = silvia
+    sun.arch.data.model = 32
+    user.language = en
+    awt.toolkit = sun.awt.X11.XToolkit
+    file.separator = /
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    sun.desktop = gnome
+    sun.cpu.isalist = 
+2014-02-09 19:04:42.247+0000 INFO  [org.neo4j]: Linux scheduler information:
+    noop [deadline] cfq 
+    noop [deadline] cfq 
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+2014-02-09 19:04:42.250+0000 INFO  [org.neo4j]: Network information:
+    Interface wlan0:
+        address: fe80:0:0:0:c2f8:daff:feaf:5ba9%3
+        address: 192.168.43.43
+    Interface lo:
+        address: 0:0:0:0:0:0:0:1%1
+        address: 127.0.0.1
+2014-02-09 19:04:42.251+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2014-02-09 19:04:42.262+0000 INFO  [org.neo4j]: [reldb/neostore.relationshiptypestore.db.names] brickCount=0 brickSize=0b mappedMem=0b (storeSize=76b)
+2014-02-09 19:04:42.263+0000 INFO  [org.neo4j]: [reldb/neostore.relationshiptypestore.db] brickCount=0 brickSize=0b mappedMem=0b (storeSize=5b)
+2014-02-09 19:04:42.264+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.strings] brickCount=0 brickSize=319744b mappedMem=319815680b (storeSize=128b)
+2014-02-09 19:04:42.265+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.index.keys] brickCount=0 brickSize=0b mappedMem=0b (storeSize=76b)
+2014-02-09 19:04:42.265+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.index] brickCount=0 brickSize=0b mappedMem=0b (storeSize=9b)
+2014-02-09 19:04:42.265+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.arrays] brickCount=0 brickSize=362752b mappedMem=362807296b (storeSize=128b)
+2014-02-09 19:04:42.266+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db] brickCount=0 brickSize=376421b mappedMem=376438784b (storeSize=82b)
+2014-02-09 19:04:42.266+0000 INFO  [org.neo4j]: [reldb/neostore.relationshipstore.db] brickCount=0 brickSize=460317b mappedMem=460324864b (storeSize=33b)
+2014-02-09 19:04:42.267+0000 INFO  [org.neo4j]: [reldb/neostore.nodestore.db] brickCount=0 brickSize=103806b mappedMem=103809024b (storeSize=27b)
+2014-02-09 19:04:42.267+0000 INFO  [org.neo4j]: [reldb/neostore] brickCount=0 brickSize=0b mappedMem=0b (storeSize=54b)
+2014-02-09 19:04:42.268+0000 INFO  [org.neo4j]: Opened logical log [reldb/nioneo_logical.log.1] version=1, lastTxId=3 (clean)
+2014-02-09 19:04:42.298+0000 INFO  [org.neo4j]: TM opening log: reldb/tm_tx_log.1
+2014-02-09 19:04:42.300+0000 INFO  [org.neo4j]: Opened logical log [reldb/index/lucene.log.1] version=1, lastTxId=1 (clean)
+2014-02-09 19:04:42.310+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2014-02-09 19:04:42.311+0000 INFO  [org.neo4j]: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId[time:1391972672610, id:-8188728961188794108, store version: 13561656364791302]
+2014-02-09 19:04:42.311+0000 INFO  [org.neo4j]: Kernel version: Neo4j - Graph Database Kernel 1.9.RC2
+2014-02-09 19:04:42.311+0000 INFO  [org.neo4j]: Neo4j component versions:
+2014-02-09 19:04:42.311+0000 INFO  [org.neo4j]:   Neo4j - Graph Database Kernel 1.9.RC2
+2014-02-09 19:04:42.312+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2014-02-09 19:04:42.312+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2014-02-09 19:04:42.312+0000 INFO  [org.neo4j]: Store versions:
+    Store versions:
+      NeoStore v0.A.0
+      NodeStore v0.A.0
+      RelationshipStore v0.A.0
+      RelationshipTypeStore v0.A.0
+      PropertyStore v0.A.0
+      PropertyIndexStore v0.A.0
+      StringPropertyStore v0.A.0
+      ArrayPropertyStore v0.A.0
+2014-02-09 19:04:42.312+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2014-02-09 19:04:42.312+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2014-02-09 19:04:42.312+0000 INFO  [org.neo4j]: Id usage:
+    Id usage:
+      NodeStore: used=3 high=2
+      RelationshipStore: used=1 high=0
+      RelationshipTypeStore: used=1 high=0
+      PropertyStore: used=2 high=1
+      PropertyIndexStore: used=1 high=0
+      StringPropertyStore: used=1 high=0
+      ArrayPropertyStore: used=1 high=0
+2014-02-09 19:04:42.312+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2014-02-09 19:04:42.312+0000 INFO  [org.neo4j]: --- STARTED diagnostics for PERSISTENCE_WINDOW_POOL_STATS START ---
+2014-02-09 19:04:42.312+0000 INFO  [org.neo4j]: --- STARTED diagnostics for PERSISTENCE_WINDOW_POOL_STATS END ---
+2014-02-09 19:04:42.313+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2014-02-09 19:04:42.313+0000 INFO  [org.neo4j]: Disk space on partition (Total / Free / Free %): 300209455104 / 274336645120 / 91
+Storage files: (filename : modification date - size)
+      store_lock: 2014-02-09T20:04:32+0100 - 0.00 B
+      lock: 2014-02-09T20:04:42+0100 - 0.00 B
+      neostore.relationshiptypestore.db.names.id: 2014-02-09T20:04:42+0100 - 9.00 B
+      neostore.propertystore.db.strings.id: 2014-02-09T20:04:42+0100 - 9.00 B
+      neostore.relationshiptypestore.db.names: 2014-02-09T20:04:42+0100 - 76.00 B
+      neostore.relationshiptypestore.db: 2014-02-09T20:04:42+0100 - 5.00 B
+      neostore.nodestore.db.id: 2014-02-09T20:04:42+0100 - 9.00 B
+      neostore.propertystore.db.index.keys: 2014-02-09T20:04:42+0100 - 76.00 B
+      neostore.relationshipstore.db.id: 2014-02-09T20:04:42+0100 - 9.00 B
+      tm_tx_log.1: 2014-02-09T20:04:42+0100 - 0.00 B
+      neostore.propertystore.db.id: 2014-02-09T20:04:42+0100 - 9.00 B
+      index:
+        lucene.log.1: 2014-02-09T20:04:42+0100 - 16.00 B
+        lucene-store.db: 2014-02-09T20:04:39+0100 - 40.00 B
+        lucene.log.v0: 2014-02-09T20:04:39+0100 - 16.00 B
+        lucene.log.active: 2014-02-09T20:04:42+0100 - 4.00 B
+      - Total: 2014-02-09T20:04:42+0100 - 76.00 B
+      neostore.relationshiptypestore.db.id: 2014-02-09T20:04:42+0100 - 9.00 B
+      nioneo_logical.log.active: 2014-02-09T20:04:42+0100 - 4.00 B
+      nioneo_logical.log.1: 2014-02-09T20:04:42+0100 - 16.00 B
+      neostore.propertystore.db.index.id: 2014-02-09T20:04:42+0100 - 9.00 B
+      neostore.relationshipstore.db: 2014-02-09T20:04:42+0100 - 33.00 B
+      neostore.propertystore.db.index: 2014-02-09T20:04:42+0100 - 9.00 B
+      neostore.id: 2014-02-09T20:04:42+0100 - 9.00 B
+      messages.log: 2014-02-09T20:04:42+0100 - 30.16 kB
+      nioneo_logical.log.v0: 2014-02-09T20:04:40+0100 - 543.00 B
+      neostore.propertystore.db.arrays.id: 2014-02-09T20:04:42+0100 - 9.00 B
+      neostore.propertystore.db.strings: 2014-02-09T20:04:42+0100 - 128.00 B
+      neostore.propertystore.db: 2014-02-09T20:04:42+0100 - 82.00 B
+      active_tx_log: 2014-02-09T20:04:37+0100 - 11.00 B
+      neostore.propertystore.db.index.keys.id: 2014-02-09T20:04:42+0100 - 9.00 B
+      neostore: 2014-02-09T20:04:42+0100 - 54.00 B
+      neostore.nodestore.db: 2014-02-09T20:04:42+0100 - 27.00 B
+      neostore.propertystore.db.arrays: 2014-02-09T20:04:42+0100 - 128.00 B
+2014-02-09 19:04:42.317+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles END ---
+2014-02-09 19:04:42.318+0000 INFO  [org.neo4j]: Started - database is now available
+2014-02-09 19:04:42.325+0000 INFO  [org.neo4j]: GC Monitor started. 
+2014-02-09 19:04:42.432+0000 INFO  [org.neo4j]: Stopping - database is now unavailable
+2014-02-09 19:04:42.432+0000 INFO  [org.neo4j]: GC Monitor stopped. 
+2014-02-09 19:04:42.488+0000 INFO  [org.neo4j]: Closed log reldb/index/lucene.log
+2014-02-09 19:04:42.532+0000 INFO  [org.neo4j]: TM shutting down
+2014-02-09 19:04:42.797+0000 INFO  [org.neo4j]: Closed log reldb/nioneo_logical.log
+2014-02-09 19:04:42.822+0000 INFO  [org.neo4j]: reldb/neostore.relationshiptypestore.db.names hit=0 miss=3 switches=0 ooe=0
+2014-02-09 19:04:42.899+0000 INFO  [org.neo4j]: reldb/neostore.relationshiptypestore.db hit=0 miss=2 switches=0 ooe=0
+2014-02-09 19:04:43.000+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db.strings hit=0 miss=0 switches=0 ooe=0
+2014-02-09 19:04:43.169+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db.index.keys hit=0 miss=2 switches=0 ooe=0
+2014-02-09 19:04:43.414+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db.index hit=0 miss=1 switches=0 ooe=0
+2014-02-09 19:04:43.631+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db.arrays hit=0 miss=0 switches=0 ooe=0
+2014-02-09 19:04:43.794+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db hit=2 miss=0 switches=0 ooe=0
+2014-02-09 19:04:44.064+0000 INFO  [org.neo4j]: reldb/neostore.relationshipstore.db hit=1 miss=0 switches=0 ooe=0
+2014-02-09 19:04:44.252+0000 INFO  [org.neo4j]: reldb/neostore.nodestore.db hit=2 miss=0 switches=0 ooe=0
+2014-02-09 19:04:44.497+0000 INFO  [org.neo4j]: reldb/neostore hit=0 miss=18 switches=0 ooe=0
+2014-02-09 19:04:44.587+0000 INFO  [org.neo4j]: NeoStore closed
+2014-02-09 19:04:44.587+0000 INFO  [org.neo4j]: --- STOPPING diagnostics START ---
+2014-02-09 19:04:44.587+0000 INFO  [org.neo4j]: --- STOPPING diagnostics END ---
+2014-02-09 19:04:44.597+0000 INFO  [org.neo4j]: WARNING! You are using an unsupported Java runtime. Please use Oracle(R) Java(TM) Runtime Environment 7.
+2014-02-09 19:04:44.598+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2014-02-09 19:04:44.598+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    neostore.propertystore.db.mapped_memory=359M
+    neostore.nodestore.db.mapped_memory=99M
+    neostore.relationshipstore.db.mapped_memory=439M
+    neostore.propertystore.db.strings.mapped_memory=305M
+    store_dir=reldb
+    neostore.propertystore.db.arrays.mapped_memory=346M
+2014-02-09 19:04:44.598+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    LINUX_SCHEDULERS
+    NETWORK
+2014-02-09 19:04:44.598+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 3.85 GB
+    Free Physical memory: 397.70 MB
+    Committed virtual memory: 779.55 MB
+    Total swap space: 7.82 GB
+    Free swap space: 7.82 GB
+2014-02-09 19:04:44.602+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 10.15 MB
+    Total memory: 15.50 MB
+    Max   memory: 494.94 MB
+    Garbage Collector: Copy: [Eden Space, Survivor Space]
+    Garbage Collector: MarkSweepCompact: [Eden Space, Survivor Space, Tenured Gen, Perm Gen, Perm Gen [shared-ro], Perm Gen [shared-rw]]
+    Memory Pool: Code Cache (Non-heap memory): committed=1.06 MB, used=1.03 MB, max=32.00 MB, threshold=0.00 B
+    Memory Pool: Eden Space (Heap memory): committed=4.31 MB, used=1.83 MB, max=136.50 MB, threshold=?
+    Memory Pool: Survivor Space (Heap memory): committed=512.00 kB, used=263.80 kB, max=17.06 MB, threshold=?
+    Memory Pool: Tenured Gen (Heap memory): committed=10.69 MB, used=3.32 MB, max=341.38 MB, threshold=0.00 B
+    Memory Pool: Perm Gen (Non-heap memory): committed=12.00 MB, used=3.48 MB, max=64.00 MB, threshold=0.00 B
+    Memory Pool: Perm Gen [shared-ro] (Non-heap memory): committed=10.00 MB, used=5.86 MB, max=10.00 MB, threshold=0.00 B
+    Memory Pool: Perm Gen [shared-rw] (Non-heap memory): committed=12.00 MB, used=7.11 MB, max=12.00 MB, threshold=0.00 B
+2014-02-09 19:04:44.604+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Linux; version: 3.8.0-35-generic; arch: i386; cpus: 4
+    Max number of file descriptors: 4096
+    Number of open file descriptors: 29
+    Process id: 10313@thesilvia
+    Byte order: LITTLE_ENDIAN
+    Local timezone: Europe/Rome
+2014-02-09 19:04:44.604+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: OpenJDK Client VM
+    VM Vendor: Oracle Corporation
+    VM Version: 24.45-b08
+    JIT compiler: HotSpot Client Compiler
+    VM Arguments: []
+2014-02-09 19:04:44.605+0000 INFO  [org.neo4j]: Java classpath:
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/plugin.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/concurrentlinkedhashmap-lru-1.3.1.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/classes
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/sunjce_provider.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-jmx-1.9.RC2.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/dnsns.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/lucene-core-3.6.2.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-lucene-index-1.9.RC2.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-cypher-1.9.RC2.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/scala-library-2.10.0.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/jsse.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/netx.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/jce.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/localedata.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-graph-algo-1.9.RC2.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/resources.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/java-atk-wrapper.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-udc-1.9.RC2.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-graph-matching-1.9.RC2.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/rt.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/libatk-wrapper.so
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/rhino.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/jfr.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-kernel-1.9.RC2.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/charsets.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/geronimo-jta_1.1_spec-1.1.1.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-python-embedded-1.9.RC2.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/sunpkcs11.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/sunrsasign.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/zipfs.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/pulse-java.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-1.9.RC2.jar
+2014-02-09 19:04:44.606+0000 INFO  [org.neo4j]: Library path:
+    /usr/java/packages/lib/i386
+    /usr/lib/i386-linux-gnu/jni
+    /lib/i386-linux-gnu
+    /usr/lib/i386-linux-gnu
+    /usr/lib/jni
+    /lib
+    /usr/lib
+2014-02-09 19:04:44.607+0000 INFO  [org.neo4j]: System.properties:
+    sun.boot.library.path = /usr/lib/jvm/java-7-openjdk-i386/jre/lib/i386
+    path.separator = :
+    file.encoding.pkg = sun.io
+    user.country = US
+    sun.os.patch.level = unknown
+    user.dir = /home/silvia/Documents/Dropbox/school/dii/assignment/humianhackers
+    neo4j.ext.udc.source = neo4py
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot Client Compiler
+    user.home = /home/silvia
+    user.timezone = Europe/Rome
+    file.encoding = UTF-8
+    user.name = silvia
+    sun.arch.data.model = 32
+    user.language = en
+    awt.toolkit = sun.awt.X11.XToolkit
+    file.separator = /
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    sun.desktop = gnome
+    sun.cpu.isalist = 
+2014-02-09 19:04:44.607+0000 INFO  [org.neo4j]: Linux scheduler information:
+    noop [deadline] cfq 
+    noop [deadline] cfq 
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+2014-02-09 19:04:44.610+0000 INFO  [org.neo4j]: Network information:
+    Interface wlan0:
+        address: fe80:0:0:0:c2f8:daff:feaf:5ba9%3
+        address: 192.168.43.43
+    Interface lo:
+        address: 0:0:0:0:0:0:0:1%1
+        address: 127.0.0.1
+2014-02-09 19:04:44.611+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2014-02-09 19:04:44.619+0000 INFO  [org.neo4j]: [reldb/neostore.relationshiptypestore.db.names] brickCount=0 brickSize=0b mappedMem=0b (storeSize=114b)
+2014-02-09 19:04:44.620+0000 INFO  [org.neo4j]: [reldb/neostore.relationshiptypestore.db] brickCount=0 brickSize=0b mappedMem=0b (storeSize=10b)
+2014-02-09 19:04:44.621+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.strings] brickCount=0 brickSize=319744b mappedMem=319815680b (storeSize=128b)
+2014-02-09 19:04:44.621+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.index.keys] brickCount=0 brickSize=0b mappedMem=0b (storeSize=76b)
+2014-02-09 19:04:44.622+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.index] brickCount=0 brickSize=0b mappedMem=0b (storeSize=9b)
+2014-02-09 19:04:44.622+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.arrays] brickCount=0 brickSize=362752b mappedMem=362807296b (storeSize=128b)
+2014-02-09 19:04:44.622+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db] brickCount=0 brickSize=376421b mappedMem=376438784b (storeSize=164b)
+2014-02-09 19:04:44.623+0000 INFO  [org.neo4j]: [reldb/neostore.relationshipstore.db] brickCount=0 brickSize=460317b mappedMem=460324864b (storeSize=66b)
+2014-02-09 19:04:44.623+0000 INFO  [org.neo4j]: [reldb/neostore.nodestore.db] brickCount=0 brickSize=103806b mappedMem=103809024b (storeSize=45b)
+2014-02-09 19:04:44.624+0000 INFO  [org.neo4j]: [reldb/neostore] brickCount=0 brickSize=0b mappedMem=0b (storeSize=54b)
+2014-02-09 19:04:44.624+0000 INFO  [org.neo4j]: Opened logical log [reldb/nioneo_logical.log.1] version=2, lastTxId=5 (clean)
+2014-02-09 19:04:44.642+0000 INFO  [org.neo4j]: TM opening log: reldb/tm_tx_log.1
+2014-02-09 19:04:44.645+0000 INFO  [org.neo4j]: Opened logical log [reldb/index/lucene.log.1] version=2, lastTxId=1 (clean)
+2014-02-09 19:04:44.666+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2014-02-09 19:04:44.666+0000 INFO  [org.neo4j]: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId[time:1391972672610, id:-8188728961188794108, store version: 13561656364791302]
+2014-02-09 19:04:44.666+0000 INFO  [org.neo4j]: Kernel version: Neo4j - Graph Database Kernel 1.9.RC2
+2014-02-09 19:04:44.666+0000 INFO  [org.neo4j]: Neo4j component versions:
+2014-02-09 19:04:44.667+0000 INFO  [org.neo4j]:   Neo4j - Graph Database Kernel 1.9.RC2
+2014-02-09 19:04:44.667+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2014-02-09 19:04:44.667+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2014-02-09 19:04:44.667+0000 INFO  [org.neo4j]: Store versions:
+    Store versions:
+      NeoStore v0.A.0
+      NodeStore v0.A.0
+      RelationshipStore v0.A.0
+      RelationshipTypeStore v0.A.0
+      PropertyStore v0.A.0
+      PropertyIndexStore v0.A.0
+      StringPropertyStore v0.A.0
+      ArrayPropertyStore v0.A.0
+2014-02-09 19:04:44.667+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2014-02-09 19:04:44.667+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2014-02-09 19:04:44.667+0000 INFO  [org.neo4j]: Id usage:
+    Id usage:
+      NodeStore: used=5 high=4
+      RelationshipStore: used=2 high=1
+      RelationshipTypeStore: used=2 high=1
+      PropertyStore: used=4 high=3
+      PropertyIndexStore: used=1 high=0
+      StringPropertyStore: used=1 high=0
+      ArrayPropertyStore: used=1 high=0
+2014-02-09 19:04:44.667+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2014-02-09 19:04:44.667+0000 INFO  [org.neo4j]: --- STARTED diagnostics for PERSISTENCE_WINDOW_POOL_STATS START ---
+2014-02-09 19:04:44.667+0000 INFO  [org.neo4j]: --- STARTED diagnostics for PERSISTENCE_WINDOW_POOL_STATS END ---
+2014-02-09 19:04:44.668+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2014-02-09 19:04:44.668+0000 INFO  [org.neo4j]: Disk space on partition (Total / Free / Free %): 300209455104 / 274336620544 / 91
+Storage files: (filename : modification date - size)
+      store_lock: 2014-02-09T20:04:32+0100 - 0.00 B
+      lock: 2014-02-09T20:04:44+0100 - 0.00 B
+      neostore.relationshiptypestore.db.names.id: 2014-02-09T20:04:44+0100 - 9.00 B
+      neostore.propertystore.db.strings.id: 2014-02-09T20:04:44+0100 - 9.00 B
+      neostore.relationshiptypestore.db.names: 2014-02-09T20:04:44+0100 - 114.00 B
+      nioneo_logical.log.v1: 2014-02-09T20:04:42+0100 - 490.00 B
+      neostore.relationshiptypestore.db: 2014-02-09T20:04:44+0100 - 10.00 B
+      neostore.nodestore.db.id: 2014-02-09T20:04:44+0100 - 9.00 B
+      neostore.propertystore.db.index.keys: 2014-02-09T20:04:44+0100 - 76.00 B
+      neostore.relationshipstore.db.id: 2014-02-09T20:04:44+0100 - 9.00 B
+      tm_tx_log.1: 2014-02-09T20:04:44+0100 - 0.00 B
+      neostore.propertystore.db.id: 2014-02-09T20:04:44+0100 - 9.00 B
+      index:
+        lucene.log.v1: 2014-02-09T20:04:42+0100 - 16.00 B
+        lucene.log.1: 2014-02-09T20:04:44+0100 - 16.00 B
+        lucene-store.db: 2014-02-09T20:04:42+0100 - 40.00 B
+        lucene.log.v0: 2014-02-09T20:04:39+0100 - 16.00 B
+        lucene.log.active: 2014-02-09T20:04:44+0100 - 4.00 B
+      - Total: 2014-02-09T20:04:44+0100 - 92.00 B
+      neostore.relationshiptypestore.db.id: 2014-02-09T20:04:44+0100 - 9.00 B
+      nioneo_logical.log.active: 2014-02-09T20:04:44+0100 - 4.00 B
+      nioneo_logical.log.1: 2014-02-09T20:04:44+0100 - 16.00 B
+      neostore.propertystore.db.index.id: 2014-02-09T20:04:44+0100 - 9.00 B
+      neostore.relationshipstore.db: 2014-02-09T20:04:44+0100 - 66.00 B
+      neostore.propertystore.db.index: 2014-02-09T20:04:44+0100 - 9.00 B
+      neostore.id: 2014-02-09T20:04:44+0100 - 9.00 B
+      messages.log: 2014-02-09T20:04:44+0100 - 45.99 kB
+      nioneo_logical.log.v0: 2014-02-09T20:04:40+0100 - 543.00 B
+      neostore.propertystore.db.arrays.id: 2014-02-09T20:04:44+0100 - 9.00 B
+      neostore.propertystore.db.strings: 2014-02-09T20:04:44+0100 - 128.00 B
+      neostore.propertystore.db: 2014-02-09T20:04:44+0100 - 164.00 B
+      active_tx_log: 2014-02-09T20:04:37+0100 - 11.00 B
+      neostore.propertystore.db.index.keys.id: 2014-02-09T20:04:44+0100 - 9.00 B
+      neostore: 2014-02-09T20:04:44+0100 - 54.00 B
+      neostore.nodestore.db: 2014-02-09T20:04:44+0100 - 45.00 B
+      neostore.propertystore.db.arrays: 2014-02-09T20:04:44+0100 - 128.00 B
+2014-02-09 19:04:44.673+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles END ---
+2014-02-09 19:04:44.674+0000 INFO  [org.neo4j]: Started - database is now available
+2014-02-09 19:04:44.685+0000 INFO  [org.neo4j]: GC Monitor started. 
+2014-02-09 19:04:44.867+0000 INFO  [org.neo4j]: Stopping - database is now unavailable
+2014-02-09 19:04:44.867+0000 INFO  [org.neo4j]: GC Monitor stopped. 
+2014-02-09 19:04:45.169+0000 INFO  [org.neo4j]: Closed log reldb/index/lucene.log
+2014-02-09 19:04:45.415+0000 INFO  [org.neo4j]: TM shutting down
+2014-02-09 19:04:47.040+0000 INFO  [org.neo4j]: Closed log reldb/nioneo_logical.log
+2014-02-09 19:04:47.564+0000 INFO  [org.neo4j]: reldb/neostore.relationshiptypestore.db.names hit=0 miss=5 switches=0 ooe=0
+2014-02-09 19:04:47.742+0000 INFO  [org.neo4j]: reldb/neostore.relationshiptypestore.db hit=0 miss=3 switches=0 ooe=0
+2014-02-09 19:04:48.231+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db.strings hit=0 miss=0 switches=0 ooe=0
+2014-02-09 19:04:48.820+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db.index.keys hit=0 miss=2 switches=0 ooe=0
+2014-02-09 19:04:49.367+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db.index hit=0 miss=1 switches=0 ooe=0
+2014-02-09 19:04:49.879+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db.arrays hit=0 miss=0 switches=0 ooe=0
+2014-02-09 19:04:50.319+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db hit=2 miss=0 switches=0 ooe=0
+2014-02-09 19:04:50.538+0000 INFO  [org.neo4j]: reldb/neostore.relationshipstore.db hit=1 miss=0 switches=0 ooe=0
+2014-02-09 19:04:50.784+0000 INFO  [org.neo4j]: reldb/neostore.nodestore.db hit=2 miss=0 switches=0 ooe=0
+2014-02-09 19:04:51.195+0000 INFO  [org.neo4j]: reldb/neostore hit=0 miss=18 switches=0 ooe=0
+2014-02-09 19:04:51.418+0000 INFO  [org.neo4j]: NeoStore closed
+2014-02-09 19:04:51.418+0000 INFO  [org.neo4j]: --- STOPPING diagnostics START ---
+2014-02-09 19:04:51.418+0000 INFO  [org.neo4j]: --- STOPPING diagnostics END ---
+2014-02-09 19:04:51.427+0000 INFO  [org.neo4j]: WARNING! You are using an unsupported Java runtime. Please use Oracle(R) Java(TM) Runtime Environment 7.
+2014-02-09 19:04:51.427+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2014-02-09 19:04:51.427+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    neostore.propertystore.db.mapped_memory=359M
+    neostore.nodestore.db.mapped_memory=99M
+    neostore.relationshipstore.db.mapped_memory=439M
+    neostore.propertystore.db.strings.mapped_memory=305M
+    store_dir=reldb
+    neostore.propertystore.db.arrays.mapped_memory=346M
+2014-02-09 19:04:51.427+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    LINUX_SCHEDULERS
+    NETWORK
+2014-02-09 19:04:51.428+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 3.85 GB
+    Free Physical memory: 399.40 MB
+    Committed virtual memory: 779.55 MB
+    Total swap space: 7.82 GB
+    Free swap space: 7.82 GB
+2014-02-09 19:04:51.429+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 10.73 MB
+    Total memory: 15.50 MB
+    Max   memory: 494.94 MB
+    Garbage Collector: Copy: [Eden Space, Survivor Space]
+    Garbage Collector: MarkSweepCompact: [Eden Space, Survivor Space, Tenured Gen, Perm Gen, Perm Gen [shared-ro], Perm Gen [shared-rw]]
+    Memory Pool: Code Cache (Non-heap memory): committed=1.09 MB, used=1.09 MB, max=32.00 MB, threshold=0.00 B
+    Memory Pool: Eden Space (Heap memory): committed=4.31 MB, used=1.30 MB, max=136.50 MB, threshold=?
+    Memory Pool: Survivor Space (Heap memory): committed=512.00 kB, used=75.45 kB, max=17.06 MB, threshold=?
+    Memory Pool: Tenured Gen (Heap memory): committed=10.69 MB, used=3.40 MB, max=341.38 MB, threshold=0.00 B
+    Memory Pool: Perm Gen (Non-heap memory): committed=12.00 MB, used=3.48 MB, max=64.00 MB, threshold=0.00 B
+    Memory Pool: Perm Gen [shared-ro] (Non-heap memory): committed=10.00 MB, used=5.86 MB, max=10.00 MB, threshold=0.00 B
+    Memory Pool: Perm Gen [shared-rw] (Non-heap memory): committed=12.00 MB, used=7.11 MB, max=12.00 MB, threshold=0.00 B
+2014-02-09 19:04:51.431+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Linux; version: 3.8.0-35-generic; arch: i386; cpus: 4
+    Max number of file descriptors: 4096
+    Number of open file descriptors: 29
+    Process id: 10313@thesilvia
+    Byte order: LITTLE_ENDIAN
+    Local timezone: Europe/Rome
+2014-02-09 19:04:51.432+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: OpenJDK Client VM
+    VM Vendor: Oracle Corporation
+    VM Version: 24.45-b08
+    JIT compiler: HotSpot Client Compiler
+    VM Arguments: []
+2014-02-09 19:04:51.432+0000 INFO  [org.neo4j]: Java classpath:
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/plugin.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/concurrentlinkedhashmap-lru-1.3.1.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/classes
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/sunjce_provider.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-jmx-1.9.RC2.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/dnsns.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/lucene-core-3.6.2.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-lucene-index-1.9.RC2.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-cypher-1.9.RC2.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/scala-library-2.10.0.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/jsse.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/netx.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/jce.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/localedata.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-graph-algo-1.9.RC2.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/resources.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/java-atk-wrapper.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-udc-1.9.RC2.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-graph-matching-1.9.RC2.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/rt.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/libatk-wrapper.so
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/rhino.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/jfr.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-kernel-1.9.RC2.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/charsets.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/geronimo-jta_1.1_spec-1.1.1.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-python-embedded-1.9.RC2.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/sunpkcs11.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/sunrsasign.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/zipfs.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/pulse-java.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-1.9.RC2.jar
+2014-02-09 19:04:51.433+0000 INFO  [org.neo4j]: Library path:
+    /usr/java/packages/lib/i386
+    /usr/lib/i386-linux-gnu/jni
+    /lib/i386-linux-gnu
+    /usr/lib/i386-linux-gnu
+    /usr/lib/jni
+    /lib
+    /usr/lib
+2014-02-09 19:04:51.434+0000 INFO  [org.neo4j]: System.properties:
+    sun.boot.library.path = /usr/lib/jvm/java-7-openjdk-i386/jre/lib/i386
+    path.separator = :
+    file.encoding.pkg = sun.io
+    user.country = US
+    sun.os.patch.level = unknown
+    user.dir = /home/silvia/Documents/Dropbox/school/dii/assignment/humianhackers
+    neo4j.ext.udc.source = neo4py
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot Client Compiler
+    user.home = /home/silvia
+    user.timezone = Europe/Rome
+    file.encoding = UTF-8
+    user.name = silvia
+    sun.arch.data.model = 32
+    user.language = en
+    awt.toolkit = sun.awt.X11.XToolkit
+    file.separator = /
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    sun.desktop = gnome
+    sun.cpu.isalist = 
+2014-02-09 19:04:51.434+0000 INFO  [org.neo4j]: Linux scheduler information:
+    noop [deadline] cfq 
+    noop [deadline] cfq 
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+2014-02-09 19:04:51.437+0000 INFO  [org.neo4j]: Network information:
+    Interface wlan0:
+        address: fe80:0:0:0:c2f8:daff:feaf:5ba9%3
+        address: 192.168.43.43
+    Interface lo:
+        address: 0:0:0:0:0:0:0:1%1
+        address: 127.0.0.1
+2014-02-09 19:04:51.438+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2014-02-09 19:04:51.446+0000 INFO  [org.neo4j]: [reldb/neostore.relationshiptypestore.db.names] brickCount=0 brickSize=0b mappedMem=0b (storeSize=152b)
+2014-02-09 19:04:51.446+0000 INFO  [org.neo4j]: [reldb/neostore.relationshiptypestore.db] brickCount=0 brickSize=0b mappedMem=0b (storeSize=15b)
+2014-02-09 19:04:51.447+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.strings] brickCount=0 brickSize=319744b mappedMem=319815680b (storeSize=128b)
+2014-02-09 19:04:51.447+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.index.keys] brickCount=0 brickSize=0b mappedMem=0b (storeSize=76b)
+2014-02-09 19:04:51.447+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.index] brickCount=0 brickSize=0b mappedMem=0b (storeSize=9b)
+2014-02-09 19:04:51.448+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.arrays] brickCount=0 brickSize=362752b mappedMem=362807296b (storeSize=128b)
+2014-02-09 19:04:51.448+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db] brickCount=0 brickSize=376421b mappedMem=376438784b (storeSize=246b)
+2014-02-09 19:04:51.448+0000 INFO  [org.neo4j]: [reldb/neostore.relationshipstore.db] brickCount=0 brickSize=460317b mappedMem=460324864b (storeSize=99b)
+2014-02-09 19:04:51.449+0000 INFO  [org.neo4j]: [reldb/neostore.nodestore.db] brickCount=0 brickSize=103806b mappedMem=103809024b (storeSize=63b)
+2014-02-09 19:04:51.449+0000 INFO  [org.neo4j]: [reldb/neostore] brickCount=0 brickSize=0b mappedMem=0b (storeSize=54b)
+2014-02-09 19:04:51.450+0000 INFO  [org.neo4j]: Opened logical log [reldb/nioneo_logical.log.1] version=3, lastTxId=7 (clean)
+2014-02-09 19:04:51.527+0000 INFO  [org.neo4j]: TM opening log: reldb/tm_tx_log.1
+2014-02-09 19:04:51.529+0000 INFO  [org.neo4j]: Opened logical log [reldb/index/lucene.log.1] version=3, lastTxId=1 (clean)
+2014-02-09 19:04:51.625+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2014-02-09 19:04:51.625+0000 INFO  [org.neo4j]: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId[time:1391972672610, id:-8188728961188794108, store version: 13561656364791302]
+2014-02-09 19:04:51.625+0000 INFO  [org.neo4j]: Kernel version: Neo4j - Graph Database Kernel 1.9.RC2
+2014-02-09 19:04:51.625+0000 INFO  [org.neo4j]: Neo4j component versions:
+2014-02-09 19:04:51.626+0000 INFO  [org.neo4j]:   Neo4j - Graph Database Kernel 1.9.RC2
+2014-02-09 19:04:51.626+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2014-02-09 19:04:51.626+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2014-02-09 19:04:51.626+0000 INFO  [org.neo4j]: Store versions:
+    Store versions:
+      NeoStore v0.A.0
+      NodeStore v0.A.0
+      RelationshipStore v0.A.0
+      RelationshipTypeStore v0.A.0
+      PropertyStore v0.A.0
+      PropertyIndexStore v0.A.0
+      StringPropertyStore v0.A.0
+      ArrayPropertyStore v0.A.0
+2014-02-09 19:04:51.626+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2014-02-09 19:04:51.627+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2014-02-09 19:04:51.627+0000 INFO  [org.neo4j]: Id usage:
+    Id usage:
+      NodeStore: used=7 high=6
+      RelationshipStore: used=3 high=2
+      RelationshipTypeStore: used=3 high=2
+      PropertyStore: used=6 high=5
+      PropertyIndexStore: used=1 high=0
+      StringPropertyStore: used=1 high=0
+      ArrayPropertyStore: used=1 high=0
+2014-02-09 19:04:51.627+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2014-02-09 19:04:51.627+0000 INFO  [org.neo4j]: --- STARTED diagnostics for PERSISTENCE_WINDOW_POOL_STATS START ---
+2014-02-09 19:04:51.627+0000 INFO  [org.neo4j]: --- STARTED diagnostics for PERSISTENCE_WINDOW_POOL_STATS END ---
+2014-02-09 19:04:51.627+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2014-02-09 19:04:51.627+0000 INFO  [org.neo4j]: Disk space on partition (Total / Free / Free %): 300209455104 / 274336530432 / 91
+Storage files: (filename : modification date - size)
+      store_lock: 2014-02-09T20:04:32+0100 - 0.00 B
+      lock: 2014-02-09T20:04:51+0100 - 0.00 B
+      neostore.relationshiptypestore.db.names.id: 2014-02-09T20:04:51+0100 - 9.00 B
+      neostore.propertystore.db.strings.id: 2014-02-09T20:04:51+0100 - 9.00 B
+      neostore.relationshiptypestore.db.names: 2014-02-09T20:04:51+0100 - 152.00 B
+      nioneo_logical.log.v1: 2014-02-09T20:04:42+0100 - 490.00 B
+      neostore.relationshiptypestore.db: 2014-02-09T20:04:51+0100 - 15.00 B
+      neostore.nodestore.db.id: 2014-02-09T20:04:51+0100 - 9.00 B
+      neostore.propertystore.db.index.keys: 2014-02-09T20:04:51+0100 - 76.00 B
+      neostore.relationshipstore.db.id: 2014-02-09T20:04:51+0100 - 9.00 B
+      tm_tx_log.1: 2014-02-09T20:04:51+0100 - 0.00 B
+      neostore.propertystore.db.id: 2014-02-09T20:04:51+0100 - 9.00 B
+      index:
+        lucene.log.v1: 2014-02-09T20:04:42+0100 - 16.00 B
+        lucene.log.1: 2014-02-09T20:04:51+0100 - 16.00 B
+        lucene-store.db: 2014-02-09T20:04:45+0100 - 40.00 B
+        lucene.log.v0: 2014-02-09T20:04:39+0100 - 16.00 B
+        lucene.log.active: 2014-02-09T20:04:51+0100 - 4.00 B
+        lucene.log.v2: 2014-02-09T20:04:45+0100 - 16.00 B
+      - Total: 2014-02-09T20:04:51+0100 - 108.00 B
+      neostore.relationshiptypestore.db.id: 2014-02-09T20:04:51+0100 - 9.00 B
+      nioneo_logical.log.active: 2014-02-09T20:04:51+0100 - 4.00 B
+      nioneo_logical.log.1: 2014-02-09T20:04:51+0100 - 16.00 B
+      neostore.propertystore.db.index.id: 2014-02-09T20:04:51+0100 - 9.00 B
+      neostore.relationshipstore.db: 2014-02-09T20:04:51+0100 - 99.00 B
+      neostore.propertystore.db.index: 2014-02-09T20:04:51+0100 - 9.00 B
+      neostore.id: 2014-02-09T20:04:51+0100 - 9.00 B
+      messages.log: 2014-02-09T20:04:51+0100 - 61.93 kB
+      nioneo_logical.log.v2: 2014-02-09T20:04:47+0100 - 505.00 B
+      nioneo_logical.log.v0: 2014-02-09T20:04:40+0100 - 543.00 B
+      neostore.propertystore.db.arrays.id: 2014-02-09T20:04:51+0100 - 9.00 B
+      neostore.propertystore.db.strings: 2014-02-09T20:04:51+0100 - 128.00 B
+      neostore.propertystore.db: 2014-02-09T20:04:51+0100 - 246.00 B
+      active_tx_log: 2014-02-09T20:04:37+0100 - 11.00 B
+      neostore.propertystore.db.index.keys.id: 2014-02-09T20:04:51+0100 - 9.00 B
+      neostore: 2014-02-09T20:04:51+0100 - 54.00 B
+      neostore.nodestore.db: 2014-02-09T20:04:51+0100 - 63.00 B
+      neostore.propertystore.db.arrays: 2014-02-09T20:04:51+0100 - 128.00 B
+2014-02-09 19:04:51.635+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles END ---
+2014-02-09 19:04:51.635+0000 INFO  [org.neo4j]: Started - database is now available
+2014-02-09 19:04:51.635+0000 INFO  [org.neo4j]: GC Monitor started. 
+2014-02-09 19:04:51.822+0000 INFO  [org.neo4j]: Stopping - database is now unavailable
+2014-02-09 19:04:51.822+0000 INFO  [org.neo4j]: GC Monitor stopped. 
+2014-02-09 19:04:51.990+0000 INFO  [org.neo4j]: Closed log reldb/index/lucene.log
+2014-02-09 19:04:52.090+0000 INFO  [org.neo4j]: TM shutting down
+2014-02-09 19:04:52.764+0000 INFO  [org.neo4j]: Closed log reldb/nioneo_logical.log
+2014-02-09 19:04:53.105+0000 INFO  [org.neo4j]: reldb/neostore.relationshiptypestore.db.names hit=0 miss=6 switches=0 ooe=0
+2014-02-09 19:04:53.262+0000 INFO  [org.neo4j]: reldb/neostore.relationshiptypestore.db hit=0 miss=3 switches=0 ooe=0
+2014-02-09 19:04:53.486+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db.strings hit=0 miss=0 switches=0 ooe=0
+2014-02-09 19:04:53.742+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db.index.keys hit=0 miss=2 switches=0 ooe=0
+2014-02-09 19:04:54.032+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db.index hit=0 miss=1 switches=0 ooe=0
+2014-02-09 19:04:54.155+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db.arrays hit=0 miss=0 switches=0 ooe=0
+2014-02-09 19:04:54.356+0000 INFO  [org.neo4j]: reldb/neostore.propertystore.db hit=2 miss=0 switches=0 ooe=0
+2014-02-09 19:04:54.700+0000 INFO  [org.neo4j]: reldb/neostore.relationshipstore.db hit=1 miss=0 switches=0 ooe=0
+2014-02-09 19:04:54.847+0000 INFO  [org.neo4j]: reldb/neostore.nodestore.db hit=2 miss=0 switches=0 ooe=0
+2014-02-09 19:04:55.292+0000 INFO  [org.neo4j]: reldb/neostore hit=0 miss=17 switches=0 ooe=0
+2014-02-09 19:04:55.415+0000 INFO  [org.neo4j]: NeoStore closed
+2014-02-09 19:04:55.415+0000 INFO  [org.neo4j]: --- STOPPING diagnostics START ---
+2014-02-09 19:04:55.415+0000 INFO  [org.neo4j]: --- STOPPING diagnostics END ---
+2014-02-09 19:05:44.574+0000 INFO  [org.neo4j]: WARNING! You are using an unsupported Java runtime. Please use Oracle(R) Java(TM) Runtime Environment 7.
+2014-02-09 19:05:44.574+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2014-02-09 19:05:44.574+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    neostore.propertystore.db.mapped_memory=359M
+    neostore.nodestore.db.mapped_memory=99M
+    neostore.relationshipstore.db.mapped_memory=439M
+    neostore.propertystore.db.strings.mapped_memory=305M
+    store_dir=reldb
+    neostore.propertystore.db.arrays.mapped_memory=346M
+2014-02-09 19:05:44.574+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    LINUX_SCHEDULERS
+    NETWORK
+2014-02-09 19:05:44.575+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 3.85 GB
+    Free Physical memory: 412.93 MB
+    Committed virtual memory: 778.64 MB
+    Total swap space: 7.82 GB
+    Free swap space: 7.82 GB
+2014-02-09 19:05:44.575+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 11.51 MB
+    Total memory: 15.50 MB
+    Max   memory: 494.94 MB
+    Garbage Collector: Copy: [Eden Space, Survivor Space]
+    Garbage Collector: MarkSweepCompact: [Eden Space, Survivor Space, Tenured Gen, Perm Gen, Perm Gen [shared-ro], Perm Gen [shared-rw]]
+    Memory Pool: Code Cache (Non-heap memory): committed=1.16 MB, used=1.13 MB, max=32.00 MB, threshold=0.00 B
+    Memory Pool: Eden Space (Heap memory): committed=4.31 MB, used=531.11 kB, max=136.50 MB, threshold=?
+    Memory Pool: Survivor Space (Heap memory): committed=512.00 kB, used=129.01 kB, max=17.06 MB, threshold=?
+    Memory Pool: Tenured Gen (Heap memory): committed=10.69 MB, used=3.40 MB, max=341.38 MB, threshold=0.00 B
+    Memory Pool: Perm Gen (Non-heap memory): committed=12.00 MB, used=3.48 MB, max=64.00 MB, threshold=0.00 B
+    Memory Pool: Perm Gen [shared-ro] (Non-heap memory): committed=10.00 MB, used=5.86 MB, max=10.00 MB, threshold=0.00 B
+    Memory Pool: Perm Gen [shared-rw] (Non-heap memory): committed=12.00 MB, used=7.11 MB, max=12.00 MB, threshold=0.00 B
+2014-02-09 19:05:44.577+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Linux; version: 3.8.0-35-generic; arch: i386; cpus: 4
+    Max number of file descriptors: 4096
+    Number of open file descriptors: 28
+    Process id: 10313@thesilvia
+    Byte order: LITTLE_ENDIAN
+    Local timezone: Europe/Rome
+2014-02-09 19:05:44.578+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: OpenJDK Client VM
+    VM Vendor: Oracle Corporation
+    VM Version: 24.45-b08
+    JIT compiler: HotSpot Client Compiler
+    VM Arguments: []
+2014-02-09 19:05:44.578+0000 INFO  [org.neo4j]: Java classpath:
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/plugin.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/concurrentlinkedhashmap-lru-1.3.1.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/classes
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/sunjce_provider.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-jmx-1.9.RC2.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/dnsns.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/lucene-core-3.6.2.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-lucene-index-1.9.RC2.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-cypher-1.9.RC2.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/scala-library-2.10.0.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/jsse.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/netx.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/jce.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/localedata.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-graph-algo-1.9.RC2.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/resources.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/java-atk-wrapper.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-udc-1.9.RC2.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-graph-matching-1.9.RC2.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/rt.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/libatk-wrapper.so
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/rhino.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/jfr.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-kernel-1.9.RC2.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/charsets.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/geronimo-jta_1.1_spec-1.1.1.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-python-embedded-1.9.RC2.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/sunpkcs11.jar
+     [bootstrap] /usr/lib/jvm/java-7-openjdk-i386/jre/lib/sunrsasign.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/zipfs.jar
+     [loader.1] file:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/pulse-java.jar
+     [classpath + loader.0] file:/usr/local/lib/python2.7/dist-packages/neo4j_embedded-1.9.c2-py2.7.egg/neo4j/javalib/neo4j-1.9.RC2.jar
+2014-02-09 19:05:44.579+0000 INFO  [org.neo4j]: Library path:
+    /usr/java/packages/lib/i386
+    /usr/lib/i386-linux-gnu/jni
+    /lib/i386-linux-gnu
+    /usr/lib/i386-linux-gnu
+    /usr/lib/jni
+    /lib
+    /usr/lib
+2014-02-09 19:05:44.579+0000 INFO  [org.neo4j]: System.properties:
+    sun.boot.library.path = /usr/lib/jvm/java-7-openjdk-i386/jre/lib/i386
+    path.separator = :
+    file.encoding.pkg = sun.io
+    user.country = US
+    sun.os.patch.level = unknown
+    user.dir = /home/silvia/Documents/Dropbox/school/dii/assignment/humianhackers
+    neo4j.ext.udc.source = neo4py
+    sun.jnu.encoding = UTF-8
+    sun.management.compiler = HotSpot Client Compiler
+    user.home = /home/silvia
+    user.timezone = Europe/Rome
+    file.encoding = UTF-8
+    user.name = silvia
+    sun.arch.data.model = 32
+    user.language = en
+    awt.toolkit = sun.awt.X11.XToolkit
+    file.separator = /
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    sun.desktop = gnome
+    sun.cpu.isalist = 
+2014-02-09 19:05:44.580+0000 INFO  [org.neo4j]: Linux scheduler information:
+    noop [deadline] cfq 
+    noop [deadline] cfq 
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+    none
+2014-02-09 19:05:44.583+0000 INFO  [org.neo4j]: Network information:
+    Interface wlan0:
+        address: fe80:0:0:0:c2f8:daff:feaf:5ba9%3
+        address: 192.168.43.43
+    Interface lo:
+        address: 0:0:0:0:0:0:0:1%1
+        address: 127.0.0.1
+2014-02-09 19:05:44.583+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2014-02-09 19:05:44.599+0000 INFO  [org.neo4j]: [reldb/neostore.relationshiptypestore.db.names] brickCount=0 brickSize=0b mappedMem=0b (storeSize=152b)
+2014-02-09 19:05:44.600+0000 INFO  [org.neo4j]: [reldb/neostore.relationshiptypestore.db] brickCount=0 brickSize=0b mappedMem=0b (storeSize=15b)
+2014-02-09 19:05:44.601+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.strings] brickCount=0 brickSize=319744b mappedMem=319815680b (storeSize=128b)
+2014-02-09 19:05:44.601+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.index.keys] brickCount=0 brickSize=0b mappedMem=0b (storeSize=76b)
+2014-02-09 19:05:44.602+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.index] brickCount=0 brickSize=0b mappedMem=0b (storeSize=9b)
+2014-02-09 19:05:44.602+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db.arrays] brickCount=0 brickSize=362752b mappedMem=362807296b (storeSize=128b)
+2014-02-09 19:05:44.603+0000 INFO  [org.neo4j]: [reldb/neostore.propertystore.db] brickCount=0 brickSize=376421b mappedMem=376438784b (storeSize=328b)
+2014-02-09 19:05:44.603+0000 INFO  [org.neo4j]: [reldb/neostore.relationshipstore.db] brickCount=0 brickSize=460317b mappedMem=460324864b (storeSize=132b)
+2014-02-09 19:05:44.603+0000 INFO  [org.neo4j]: [reldb/neostore.nodestore.db] brickCount=0 brickSize=103806b mappedMem=103809024b (storeSize=81b)
+2014-02-09 19:05:44.605+0000 INFO  [org.neo4j]: [reldb/neostore] brickCount=0 brickSize=0b mappedMem=0b (storeSize=54b)
+2014-02-09 19:05:44.606+0000 INFO  [org.neo4j]: Opened logical log [reldb/nioneo_logical.log.1] version=4, lastTxId=8 (clean)
+2014-02-09 19:05:44.629+0000 INFO  [org.neo4j]: TM opening log: reldb/tm_tx_log.1
+2014-02-09 19:05:44.631+0000 INFO  [org.neo4j]: Opened logical log [reldb/index/lucene.log.1] version=4, lastTxId=1 (clean)
+2014-02-09 19:05:44.653+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2014-02-09 19:05:44.653+0000 INFO  [org.neo4j]: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId[time:1391972672610, id:-8188728961188794108, store version: 13561656364791302]
+2014-02-09 19:05:44.653+0000 INFO  [org.neo4j]: Kernel version: Neo4j - Graph Database Kernel 1.9.RC2
+2014-02-09 19:05:44.653+0000 INFO  [org.neo4j]: Neo4j component versions:
+2014-02-09 19:05:44.655+0000 INFO  [org.neo4j]:   Neo4j - Graph Database Kernel 1.9.RC2
+2014-02-09 19:05:44.655+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2014-02-09 19:05:44.655+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2014-02-09 19:05:44.655+0000 INFO  [org.neo4j]: Store versions:
+    Store versions:
+      NeoStore v0.A.0
+      NodeStore v0.A.0
+      RelationshipStore v0.A.0
+      RelationshipTypeStore v0.A.0
+      PropertyStore v0.A.0
+      PropertyIndexStore v0.A.0
+      StringPropertyStore v0.A.0
+      ArrayPropertyStore v0.A.0
+2014-02-09 19:05:44.655+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2014-02-09 19:05:44.655+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2014-02-09 19:05:44.655+0000 INFO  [org.neo4j]: Id usage:
+    Id usage:
+      NodeStore: used=9 high=8
+      RelationshipStore: used=4 high=3
+      RelationshipTypeStore: used=3 high=2
+      PropertyStore: used=8 high=7
+      PropertyIndexStore: used=1 high=0
+      StringPropertyStore: used=1 high=0
+      ArrayPropertyStore: used=1 high=0
+2014-02-09 19:05:44.656+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2014-02-09 19:05:44.656+0000 INFO  [org.neo4j]: --- STARTED diagnostics for PERSISTENCE_WINDOW_POOL_STATS START ---
+2014-02-09 19:05:44.656+0000 INFO  [org.neo4j]: --- STARTED diagnostics for PERSISTENCE_WINDOW_POOL_STATS END ---
+2014-02-09 19:05:44.656+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2014-02-09 19:05:44.656+0000 INFO  [org.neo4j]: Disk space on partition (Total / Free / Free %): 300209455104 / 274336514048 / 91
+Storage files: (filename : modification date - size)
+      store_lock: 2014-02-09T20:04:32+0100 - 0.00 B
+      lock: 2014-02-09T20:05:44+0100 - 0.00 B
+      neostore.relationshiptypestore.db.names.id: 2014-02-09T20:05:44+0100 - 9.00 B
+      neostore.propertystore.db.strings.id: 2014-02-09T20:05:44+0100 - 9.00 B
+      neostore.relationshiptypestore.db.names: 2014-02-09T20:05:44+0100 - 152.00 B
+      nioneo_logical.log.v1: 2014-02-09T20:04:42+0100 - 490.00 B
+      neostore.relationshiptypestore.db: 2014-02-09T20:05:44+0100 - 15.00 B
+      neostore.nodestore.db.id: 2014-02-09T20:05:44+0100 - 9.00 B
+      neostore.propertystore.db.index.keys: 2014-02-09T20:05:44+0100 - 76.00 B
+      neostore.relationshipstore.db.id: 2014-02-09T20:05:44+0100 - 9.00 B
+      tm_tx_log.1: 2014-02-09T20:05:44+0100 - 0.00 B
+      neostore.propertystore.db.id: 2014-02-09T20:05:44+0100 - 9.00 B
+      index:
+        lucene.log.v1: 2014-02-09T20:04:42+0100 - 16.00 B
+        lucene.log.1: 2014-02-09T20:05:44+0100 - 16.00 B
+        lucene-store.db: 2014-02-09T20:04:51+0100 - 40.00 B
+        lucene.log.v0: 2014-02-09T20:04:39+0100 - 16.00 B
+        lucene.log.active: 2014-02-09T20:05:44+0100 - 4.00 B
+        lucene.log.v3: 2014-02-09T20:04:51+0100 - 16.00 B
+        lucene.log.v2: 2014-02-09T20:04:45+0100 - 16.00 B
+      - Total: 2014-02-09T20:05:44+0100 - 124.00 B
+      neostore.relationshiptypestore.db.id: 2014-02-09T20:05:44+0100 - 9.00 B
+      nioneo_logical.log.active: 2014-02-09T20:05:44+0100 - 4.00 B
+      nioneo_logical.log.1: 2014-02-09T20:05:44+0100 - 16.00 B
+      neostore.propertystore.db.index.id: 2014-02-09T20:05:44+0100 - 9.00 B
+      neostore.relationshipstore.db: 2014-02-09T20:05:44+0100 - 132.00 B
+      neostore.propertystore.db.index: 2014-02-09T20:05:44+0100 - 9.00 B
+      neostore.id: 2014-02-09T20:05:44+0100 - 9.00 B
+      messages.log: 2014-02-09T20:05:44+0100 - 78.00 kB
+      nioneo_logical.log.v2: 2014-02-09T20:04:47+0100 - 505.00 B
+      nioneo_logical.log.v0: 2014-02-09T20:04:40+0100 - 543.00 B
+      neostore.propertystore.db.arrays.id: 2014-02-09T20:05:44+0100 - 9.00 B
+      neostore.propertystore.db.strings: 2014-02-09T20:05:44+0100 - 128.00 B
+      neostore.propertystore.db: 2014-02-09T20:05:44+0100 - 328.00 B
+      nioneo_logical.log.v3: 2014-02-09T20:04:52+0100 - 375.00 B
+      active_tx_log: 2014-02-09T20:04:37+0100 - 11.00 B
+      neostore.propertystore.db.index.keys.id: 2014-02-09T20:05:44+0100 - 9.00 B
+      neostore: 2014-02-09T20:05:44+0100 - 54.00 B
+      neostore.nodestore.db: 2014-02-09T20:05:44+0100 - 81.00 B
+      neostore.propertystore.db.arrays: 2014-02-09T20:05:44+0100 - 128.00 B
