@@ -3,7 +3,7 @@ import shutil
  
 workingdb = "reldatabase"
  
-def addtodb(lnode, rnode, rel):
+def addtodb(lnode, rnode, relationship):
 	# Create a database
 	db = GraphDatabase(workingdb)
 	#	rel['subjsym'], rel['objsym'], rel['filler'] 
@@ -12,9 +12,9 @@ def addtodb(lnode, rnode, rel):
 		leftnode = db.node(name=(lnode))
 		rightnode = db.node(name=(rnode))
 
-		leftnode.relationships.create(rel, rightnode)
+		leftnode.relationships.create(relationship, rightnode)
 
-	print "Created nodes " + rel['subjsym'] + " and " + rel['objsym'] + " with relationship " + rel['filler'] +"! \n"
+	print "Created nodes " + lnode + " and " + rnode + " with relationship " + relationship +"! \n"
 
 	db.shutdown()
 
@@ -45,9 +45,18 @@ def showAllDB():
 
 	query = """START n=node(*)
 				MATCH (n) - [r] -> (m)
-				RETURN n, r, m """
+				RETURN n.name, r, m.name """
 
 	print db.query(query)
 
 	db.shutdown()
 
+def showAllRelations(qname):
+	db = GraphDatabase(workingdb)
+
+	query = """START n=node(*)
+			   MATCH (n) - [r] -> (m)
+			   WHERE n.name = {name}
+			   RETURN n.name, r, m.name"""
+
+	print db.query(query, name=qname)

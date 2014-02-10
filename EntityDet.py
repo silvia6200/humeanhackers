@@ -54,11 +54,10 @@ def detectEnt(sentences):
 			#print("me here")
 
 			for rel in Rel.extract_rels('NE','NE', sentne, pattern, 10): 
-				print("and here")
 				lnode = rel['subjsym']+""
 				rnode = rel['objsym']+""
-				rel = pnames[ps]
-				NeoCreate.addtodb(lnode, rnode, rel) #relation is pnames[ps]
+				relationship = pnames[ps]
+				NeoCreate.addtodb(lnode, rnode, relationship) #relation is pnames[ps]
 				f.write(pnames[ps] + " Relation:  " + nltk.sem.relextract.show_raw_rtuple(rel) + '\n')
 				r += 1
 				print( (str(r)), end='\r') 
@@ -82,8 +81,8 @@ def detectEnt(sentences):
 
 					lnode = rel2['subjsym']+""
 					rnode = rel2['objsym']+""
-					rel = verbl[:(verbl.find('/'))]
-					NeoCreate.addtodb(lnode, rnode,rel)
+					relationship = verbl[:(verbl.find('/'))]
+					NeoCreate.addtodb(lnode, rnode,relationship)
 					#relation is thing down there ; lnode is ssym 
 
 				f.write(verbl[:(verbl.find('/'))] + " Relation:  " + nltk.sem.relextract.show_raw_rtuple(rel2) + '\n')
