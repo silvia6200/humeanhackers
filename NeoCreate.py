@@ -9,10 +9,14 @@ def addtodb(lnode, rnode, relationship):
 	#	rel['subjsym'], rel['objsym'], rel['filler'] 
 
 	with db.transaction:
-		leftnode = db.node(name=(lnode))
-		rightnode = db.node(name=(rnode))
-
-		leftnode.relationships.create(relationship, rightnode)
+		countquery = """START n=node(*)
+					MATCH (n)
+					WHERE HAS(n.name) AND n.name = {name}
+					RETURN count(n)"""
+		if( int(str(db.query(countquery, name=qname).single['count(n)'] )) == 0 ): 
+			leftnode = db.node(name=(lnode))
+			rightnode = db.node(name=(rnode))
+			leftnode.relationships.create(relationship, rightnode)
 
 	print "Created nodes " + lnode + " and " + rnode + " with relationship " + relationship +"! \n"
 
@@ -53,10 +57,18 @@ def showAllDB():
 
 def showAllRelations(qname):
 	db = GraphDatabase(workingdb)
+	countquery = """START n=node(*)
+					MATCH (n)
+					WHERE HAS(n.name) AND n.name = {name}
+					RETURN count(n)"""
+	print int(str(db.query(countquery, name=qname).single['count(n)'] )) 
+
 
 	query = """START n=node(*)
 			   MATCH (n) - [r] -> (m)
-			   WHERE n.name = {name}
+			   WHERE HAS(n.name) AND n.name = {name}
 			   RETURN n.name, r, m.name"""
 
-	print db.query(query, name=qname)
+	print len(db.query(query, name=qname)) == 0
+
+	db.shutdown()
