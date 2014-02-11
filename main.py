@@ -1,8 +1,9 @@
-import ReadDataSet, SplitText, EntityDet
+import ReadDataSet, SplitText, EntityDet, NeoCreate
 
-def extract(txtdoc,reads):
+def extract(txtdoc,reads,clean):
 #reads = true if the document has to be read in or in other words ReadDataSet has to be run over the document
-
+	if clean: 
+		NeoCreate.cleanDB()
 	if reads:
 		ReadDataSet.readD(txtdoc)
 		print("document read.")
@@ -16,3 +17,6 @@ def extract(txtdoc,reads):
 		print("document has been split.")
 		EntityDet.detectEnt(splits)
 		print("entity detection completed.")
+
+	NeoCreate.showAllNodes()
+

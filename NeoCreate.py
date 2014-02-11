@@ -9,17 +9,42 @@ def addtodb(lnode, rnode, relationship):
 	#	rel['subjsym'], rel['objsym'], rel['filler'] 
 
 	with db.transaction:
-		countquery = """START n=node(*)
-					MATCH (n)
-					WHERE HAS(n.name) AND n.name = {name}
-					RETURN count(n)"""
-		if( int(str(db.query(countquery, name=qname).single['count(n)'] )) == 0 ): 
+		countquery = """START n=node(*) 	
+						MATCH (n)
+						WHERE HAS(n.name) AND n.name = {name}
+						RETURN count(n)"""
+		if  (int(str(db.query(countquery, name=lnode).single['count(n)'] )) == 0):
 			leftnode = db.node(name=(lnode))
+			print "Lnode " + lnode + "created"
+		else:
+			for node in db.nodes:
+				for key, value in node.items():
+					if (key == "name" and value == lnode):
+						leftnode = node
+
+		if  (int(str(db.query(countquery, name=rnode).single['count(n)'] )) == 0):
 			rightnode = db.node(name=(rnode))
+			print "Rnode " +rnode + "created"
+
+		else:
+			for node in db.nodes:
+				for key, value in node.items():
+					if (key == "name" and value == rnode):
+						rightnode = node
+
+		crquery = """START n=node(*)
+					MATCH (n) - [r] -> m
+					WHERE HAS(n.name) AND n.name = {nname} 
+						  AND HAS(m.name) AND m.name = {mname}
+						  AND TYPE(r) = {rel}
+					RETURN count(r)"""
+		if (int(str(db.query(crquery, nname=lnode, mname=rnode, rel=relationship).single['count(r)'] )) == 0):
 			leftnode.relationships.create(relationship, rightnode)
+			print "relationship " + relationship
 
-	print "Created nodes " + lnode + " and " + rnode + " with relationship " + relationship +"! \n"
 
+
+		
 	db.shutdown()
 
 def showAllNodes():
@@ -57,11 +82,6 @@ def showAllDB():
 
 def showAllRelations(qname):
 	db = GraphDatabase(workingdb)
-	countquery = """START n=node(*)
-					MATCH (n)
-					WHERE HAS(n.name) AND n.name = {name}
-					RETURN count(n)"""
-	print int(str(db.query(countquery, name=qname).single['count(n)'] )) 
 
 
 	query = """START n=node(*)
@@ -69,6 +89,7 @@ def showAllRelations(qname):
 			   WHERE HAS(n.name) AND n.name = {name}
 			   RETURN n.name, r, m.name"""
 
-	print len(db.query(query, name=qname)) == 0
+	print db.query(query, name=qname)
+	
 
 	db.shutdown()
