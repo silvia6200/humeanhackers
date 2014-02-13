@@ -53,7 +53,7 @@ def detectEnt(sentences):
 		for pattern in patterns:
 			#print("me here")
 
-			for rel in Rel.extract_rels('NE','NE', sentne, pattern, 5): 
+			for rel in Rel.extract_rels('NE','NE', sentne, pattern, 10): 
 				lnode = rel['subjsym']+""
 				rnode = rel['objsym']+""
 				relationship = pnames[ps]
