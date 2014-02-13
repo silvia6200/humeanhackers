@@ -19,7 +19,7 @@ def detectEnt(sentences):
 	IN = re.compile(r'.*\bin\b(?!\b.+ing)')
 	OF = re.compile(r'.*\bof\b(?!\b.+ing)')
 	#IS = re.compile(r'.*\bis\b(?!\b.+ing)(?!\b.+/VBN).*')   insert IS to patterns when uncommenting
-	TO = re.compile(r'.*\bto\b(?!\b.+ing)')
+	FROM = re.compile(r'.*\bfrom\b(?!\b.+ing)')
 	AND = re.compile(r'.*\band\b')
 
 	VB = re.compile(r'.*\b/VB\b(?!\b.+ing)(?!\b.+/VBN)')     # Base form
@@ -30,8 +30,8 @@ def detectEnt(sentences):
 	VBP = re.compile(r'.*\b/VBP\b(?!\b.+ing)(?!\b.+/VBN)')	 # present not 3rd Sg
 	VBPA = re.compile(r'.*\b/VBN.*\bby\b')					# passive
 	
-	patterns = [IN,OF, TO,AND]
-	pnames = ["IN","OF","TO","AND"]
+	patterns = [IN,OF,FROM,AND]
+	pnames = ["IN","OF","FROM","AND"]
 	#write document
 	vpatterns = [VB, VBD, VBG, VBN, VBP, VBZ,VBPA]
 	vnames = ["/VB", "/VBD", "/VBG","/VBN","/VBP","/VBZ","/VBN"]
@@ -39,7 +39,7 @@ def detectEnt(sentences):
 
 
 	#number of relations
-	r= 0
+	r = 0
 	print("Number of relations found: ")
 	for sentence in sentences:
 	#entity detection and parsing
@@ -53,7 +53,7 @@ def detectEnt(sentences):
 		for pattern in patterns:
 			#print("me here")
 
-			for rel in Rel.extract_rels('NE','NE', sentne, pattern, 10): 
+			for rel in Rel.extract_rels('NE','NE', sentne, pattern, 5): 
 				lnode = rel['subjsym']+""
 				rnode = rel['objsym']+""
 				relationship = pnames[ps]
@@ -79,10 +79,11 @@ def detectEnt(sentences):
 					rel2['subjtext'] = rel2['objtext']
 					rel2['objtext'] = stext
 
-					lnode = rel2['subjsym']+""
-					rnode = rel2['objsym']+""
-					relationship = verbl[:(verbl.find('/'))]
-					NeoCreate.addtodb(lnode, rnode,relationship)
+				lnode = rel2['subjsym']+""
+				rnode = rel2['objsym']+""
+				relationship = verbl[:(verbl.find('/'))]
+				NeoCreate.addtodb(lnode, rnode,relationship)
+
 					#relation is thing down there ; lnode is ssym 
 
 				f.write(verbl[:(verbl.find('/'))] + " Relation:  " + nltk.sem.relextract.show_raw_rtuple(rel2) + '\n')
