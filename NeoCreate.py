@@ -1,7 +1,7 @@
 from neo4j import GraphDatabase
 import shutil
  
-workingdb = "reldatabase"
+workingdb = "mannerdb"
  
 def addtodb(lnode, rnode, relationship):
 	# Create a database
@@ -9,40 +9,38 @@ def addtodb(lnode, rnode, relationship):
 	#	rel['subjsym'], rel['objsym'], rel['filler'] 
 
 	with db.transaction:
-		countquery = """START n=node(*) 	
-						MATCH (n)
-						WHERE HAS(n.name) AND n.name = {name}
-						RETURN count(n)"""
-		if  (int(str(db.query(countquery, name=lnode).single['count(n)'] )) == 0):
+		
+		lnodef = False	#lnodef and rnodef store whether the node has been found in the db
+		rnodef = False
+		for node in db.nodes:
+				for key, value in node.items():
+					if (key == "name"):
+						if(value == lnode):
+							leftnode = node
+							lnodef = True	
+						if(value == rnode):
+							rightnode = node
+							rnodef = True
+
+		if (not lnodef):
 			leftnode = db.node(name=(lnode))
 			print "Lnode " + lnode + "created"
-		else:
-			for node in db.nodes:
-				for key, value in node.items():
-					if (key == "name" and value == lnode):
-						leftnode = node
 
-		if  (int(str(db.query(countquery, name=rnode).single['count(n)'] )) == 0):
+		if (not rnodef):
 			rightnode = db.node(name=(rnode))
-			print "Rnode " +rnode + "created"
+			print "Rnode " + rnode + "created"
 
-		else:
-			for node in db.nodes:
-				for key, value in node.items():
-					if (key == "name" and value == rnode):
-						rightnode = node
-
-		crquery = """START n=node(*)
-					MATCH (n) - [r] -> m
-					WHERE HAS(n.name) AND n.name = {nname} 
-						  AND HAS(m.name) AND m.name = {mname}
-						  AND TYPE(r) = {rel}
-					RETURN count(r)"""
-		if (int(str(db.query(crquery, nname=lnode, mname=rnode, rel=relationship).single['count(r)'] )) == 0):
-			leftnode.relationships.create(relationship, rightnode)
-			print "relationship " + relationship
-
-
+		relf = False
+		for rel in leftnode.relationships.outgoing:
+			for key, value in rel.items():
+				if (str(rel.type) == relationship and key == 'hits'and rel.end == rightnode):
+					rel[key] = value + 1
+					relf = True
+					print "rel  found. Increasing number of hits "
+		if (not relf):
+			rel = leftnode.relationships.create(relationship, rightnode)
+			print "created relationship " + relationship
+			rel['hits'] = 1
 
 		
 	db.shutdown()
@@ -68,17 +66,6 @@ def showAllNodes():
 def cleanDB():
 	shutil.rmtree(workingdb)
 
-def showAllDB():
-	#open the db
-	db = GraphDatabase(workingdb)
-
-	query = """START n=node(*)
-				MATCH (n) - [r] -> (m)
-				RETURN n.name, r, m.name """
-
-	print db.query(query)
-
-	db.shutdown()
 
 def showAllRelations(qname):
 	db = GraphDatabase(workingdb)
@@ -90,6 +77,17 @@ def showAllRelations(qname):
 			   RETURN n.name, r, m.name"""
 
 	print db.query(query, name=qname)
-	
+
+
+	db.shutdown()
+
+def showAllDB():
+	db = GraphDatabase(workingdb)
+
+	query = """START n=node(*)
+				MATCH (n) - [r] -> (m)
+				RETURN n.name, r, m.name"""
+
+	print db.query(query)
 
 	db.shutdown()
