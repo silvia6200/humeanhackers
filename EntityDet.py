@@ -5,17 +5,6 @@ import NeoCreate
 
 def detectEnt(sentences):
 	
-	grammar = r"""
-		NP: {<DT|JJ|NN.*>+}          # Chunk sequences of DT, JJ, NN
-		PP: {<IN><NP>}               # Chunk prepositions followed by NP
-		VB: {<VB.>+}				 # Chunk sequence of verbs
-		VP: {<VB><NP|PP|CLAUSE>+$}   # Chunk verbs and their arguments
-		CLAUSE: {<NP><VP>}           # Chunk NP, VP
-		"""
-	cp = nltk.RegexpParser(grammar, loop=2)
-	
-	
-
 	IN = re.compile(r'.*\bin\b(?!\b.+ing)')
 	OF = re.compile(r'.*\bof\b(?!\b.+ing)')
 	#IS = re.compile(r'.*\bis\b(?!\b.+ing)(?!\b.+/VBN).*')   insert IS to patterns when uncommenting
@@ -82,7 +71,7 @@ def detectEnt(sentences):
 					lnode = rel2['subjsym']+""
 					rnode = rel2['objsym']+""
 					relationship = verbl[:(verbl.find('/'))]
-					NeoCreate.addtodb(lnode, rnode,relationship)
+				NeoCreate.addtodb(lnode, rnode,relationship)
 					#relation is thing down there ; lnode is ssym 
 
 				f.write(verbl[:(verbl.find('/'))] + " Relation:  " + nltk.sem.relextract.show_raw_rtuple(rel2) + '\n')
