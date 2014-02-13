@@ -40,6 +40,24 @@ def readD(txtdoc):
 					
 			a +=1
 			print( (str(a)), end='\r') 
+
+		if line.startswith("<answer_item>"):
+			
+			cleansentence = line[13:-14].replace("&#xa;"," ").replace(";",".").replace("&lt;br /&gt;&#xa;","").replace("&#xa;"," ").replace("...",".").replace("<"," ").replace("&lt.br /&gt.","")
+		#split line into sentences
+			sentences = nltk.sent_tokenize(cleansentence)
+				
+			s = len(sentences)
+			#write into document
+			x=0
+			while x < (s-1):
+				f.write(sentences[x] + "\n")
+				a +=1
+				x+=1
+			f.write(sentences[s-1])
+					
+			a +=1
+			print( (str(a)), end='\r') 
 				
 	f.close
         
